@@ -1,5 +1,7 @@
 # Peer Review Arena
 
+![peer-review-arena](screenshots/hero.png)
+
 Local web app: **3–5 reviewer personas** critique a draft (spec, PR description, or agent plan), then a **Chair** merges findings into a consensus scorecard with disagreements and a must-fix-before-ship list.
 
 Inspired by multi-subagent review patterns and Jim’s “critique loop before merge” runner-up. TokenMax / Grok Bot weekly burn — not Cursor Models.
