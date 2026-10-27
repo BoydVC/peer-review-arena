@@ -1,0 +1,117 @@
+{
+  "brief_id": "brief-027",
+  "title": "Grok Council — Multi-Bot Deliberation Hold Before Apply",
+  "source": "agent-brief-forge/out/brief-027.md + peer-review-027.json + citations-027.json",
+  "parent_briefs": [
+    "brief-001",
+    "brief-003",
+    "brief-004",
+    "brief-007",
+    "brief-008",
+    "brief-017",
+    "brief-018"
+  ],
+  "paired_with": {
+    "brief-008": "Hold/Apply/CAS for agent inboxes — binding digest + human Apply",
+    "brief-017": "send-on-behalf Hold/Apply — auto_send=0; never send from burn",
+    "brief-004": "Peer Arena critique-before-merge — independent critic (not a council Apply)",
+    "brief-007": "Pre-ops / PREOPS_GATES — should the agent touch the target at all?"
+  },
+  "peer_review": {
+    "verdict": "accept_with_revisions_noted",
+    "independence": "simulated peer (same model family) — prefer external /interrogate before fleet law"
+  },
+  "timezone": "America/New_York",
+  "standing_rule": "Many bots may advise; none may Apply; majority is evidence, not authority. Council Hold until human Apply. auto_apply_council=0; auto_send=0.",
+  "council_seats": [
+    "Michael (ops)",
+    "Pam (household)",
+    "Oscar (money)",
+    "Jim (Git/code)",
+    "Kelly (comms tone)",
+    "TokenMax (pool/burn)"
+  ],
+  "desk_stages": [
+    "bind digest to action draft (brief-008/017)",
+    "seat role bots with privilege splits",
+    "bounded deliberation with refute framing",
+    "stamp LIVE vs SYNTHETIC honesty",
+    "Council Hold — recommendation only",
+    "human Apply after revalidation (Boyd / Pam by scope)"
+  ],
+  "scorecard": {
+    "auto_apply_council": 0,
+    "auto_send": 0,
+    "rubber_stamp": 0,
+    "fake_live_council": 0,
+    "truncated_digest_applies": 0,
+    "hold_timeout_failopen": 0,
+    "self_approve": 0,
+    "minority_drop": 0,
+    "tool_during_deliberation": 0,
+    "cas_conflict_silent": 0,
+    "wrong_principal": 0,
+    "utc_only_stamps": 0,
+    "kpd_bleed": 0,
+    "timezone": "America/New_York"
+  },
+  "denied_tools": [
+    "auto-apply",
+    "auto-apply-council",
+    "council-force-send",
+    "majority-vote Apply",
+    "chair / scribe self-Apply",
+    "Slack chat.postMessage from burn / council",
+    "Gmail send from burn / council",
+    "household notify from burn / council",
+    "merge / overwrite from council recommendation",
+    "Parse APPROVE string as Apply command",
+    "Hold expiry fail-open → execute",
+    "KPD / firm / client council seats",
+    "burn outbound / cloud agents from research burn"
+  ],
+  "refused_post_prefixes": [
+    "/api/auto-apply",
+    "/api/auto-apply-council",
+    "/api/council-force-send"
+  ],
+  "laws": [
+    {
+      "id": "advise-not-apply",
+      "text": "Many bots may advise; none may Apply. Majority vote is evidence, not authority. Council recommendation never invokes send/merge/notify."
+    },
+    {
+      "id": "auto-apply-council-zero",
+      "text": "auto_apply_council=0 — no code path where recommendation==APPROVE or votes_approve>=quorum invokes a side-effecting tool. Human approve after revalidation is the sole resume."
+    },
+    {
+      "id": "auto-send-zero",
+      "text": "auto_send=0 — no Slack/Gmail/notify from weekly burn principals or council scribe/chair. Deepens brief-017; council creates no new exception."
+    },
+    {
+      "id": "pair-008-017",
+      "text": "Pairs brief-008 CAS Hold + brief-017 send-on-behalf. Green Peer Arena ≠ Grok Council. Council APPROVE ≠ Apply. Apply without digest revalidation is TOCTOU."
+    },
+    {
+      "id": "refute-framing",
+      "text": "Seats use refute framing (try to disprove safe-to-Apply). Correlated same-model seats are independence=LOW; rubber_stamp=0."
+    },
+    {
+      "id": "live-vs-synthetic",
+      "text": "Every council artifact stamps LIVE vs SYNTHETIC vs ILLUSTRATIVE. fake_live_council=0 — demo transcripts never sold as LIVE Apply authority."
+    },
+    {
+      "id": "hold-fail-closed",
+      "text": "Hold expiry → reject/expire, never Apply (hold_timeout_failopen=0). Chair/scribe cannot self-approve (self_approve=0)."
+    },
+    {
+      "id": "america-new-york",
+      "text": "America/New_York stamps on council packets and scorecards; utc_only_stamps=0."
+    },
+    {
+      "id": "no-kpd-no-burn-send",
+      "text": "Personal household fleet only. No KPD. No burn outbound. No cloud agents from research burn. kpd_bleed=0."
+    }
+  ],
+  "separation": "brief-008 = inbox Hold/Apply/CAS; brief-017 = send-on-behalf cards (auto_send=0); brief-004 = Peer Arena critique; brief-007 = pre-ops touch card; brief-024 = /correct CI encode; brief-027 = Grok Council multi-bot Hold before human Apply (auto_apply_council=0 + auto_send=0)"
+}

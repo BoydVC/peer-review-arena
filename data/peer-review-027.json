@@ -1,0 +1,81 @@
+{
+  "brief_id": "brief-027",
+  "reviewer": "simulated-peer-reviewer",
+  "reviewed_at": "2026-10-27T00:35:00-04:00",
+  "verdict": "accept_with_revisions_noted",
+  "findings": [
+    {
+      "id": "PR-1",
+      "severity": "high",
+      "claim": "Majority council APPROVE auto-invokes Slack/Gmail send",
+      "issue": "Debate aggregators must not be executors; majority is not Apply.",
+      "recommendation": "Keep auto_apply_council=0 / auto_send=0; interrupt before connectors; Appendix F.",
+      "status": "addressed_in_sections_1_4_6_7_8_appendix_F_H_J",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-2",
+      "severity": "high",
+      "claim": "Unanimous APPROVE from correlated Grok seats treated as high confidence",
+      "issue": "Confabulation consensus / correlated errors make rubber-stamps look like proof.",
+      "recommendation": "Keep independence=LOW + evidenced checks + rubber_stamp KPI; Appendix E.",
+      "status": "addressed_in_sections_1_4_5_7_8_appendix_E",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-3",
+      "severity": "high",
+      "claim": "SYNTHETIC / demo council transcript shown as LIVE",
+      "issue": "UI honesty failure (LITL); fake_live_council.",
+      "recommendation": "Keep \u00a75 stamp law and U03.",
+      "status": "addressed_in_sections_5_7_8_appendix_I",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-4",
+      "severity": "high",
+      "claim": "Council chair / scribe Approves its own Hold",
+      "issue": "Self-approve bypasses human principal and C9.2.9 key isolation.",
+      "recommendation": "Keep \u00a76 principal matrix and U04; approval creds outside bots.",
+      "status": "addressed_in_sections_4_6_8",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-5",
+      "severity": "medium",
+      "claim": "Apply from truncated card / plan-review-only gate",
+      "issue": "C9.2.2 truncation and Magentic plan review \u2260 action Apply.",
+      "recommendation": "Keep \u00a74.3 / \u00a76.2 / U05 / U08.",
+      "status": "addressed_in_sections_4_6_8_9",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-6",
+      "severity": "medium",
+      "claim": "Evidenced minority REJECT dropped for majority",
+      "issue": "AGENTAUDITOR / Latere: majority can suppress correct minority.",
+      "recommendation": "Keep minority_blocking + U10.",
+      "status": "addressed_in_sections_4_7_8",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-7",
+      "severity": "low",
+      "claim": "Simulated peer reviewer is an independent authority",
+      "issue": "Same Grok Bot weekly burn synthesizer and peer_reviewer share model family and pool.",
+      "recommendation": "Label independence quality; prefer external /interrogate before encoding as fleet law.",
+      "status": "noted_for_operators",
+      "convergence": "n/a"
+    }
+  ],
+  "strengths": [
+    "Clear Council Desk stages: digest\u2192seats\u2192refute\u2192recommend\u2192Hold\u2192human Apply",
+    "auto_apply_council=0 / auto_send=0 scorecard with definitions",
+    "Pairs brief-008 + brief-017 without collapsing inbox vs send vs council",
+    "Rubber-stamp / correlated-voter / SYNTHETIC-as-LIVE failure modes explicit",
+    "Framework mapping honest (LangGraph/OpenAI/Magentic/CrewAI/AutoGen deltas)",
+    "No KPD; no burn outbound; no cloud agents; America/New_York",
+    "70 live HTTP citations; America/New_York stamps"
+  ],
+  "required_fixes_before_publish": []
+}

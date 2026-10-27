@@ -1,0 +1,557 @@
+{
+  "review": {
+    "schema": "peer-review-arena/v1",
+    "draft_id": "forge-next-topics",
+    "title": "Agent Brief Forge NEXT_TOPICS",
+    "source": "seed:forge-next-topics",
+    "kind": "forge_pack",
+    "reviewed_at": "2026-10-27T00:38:34-04:00",
+    "draft_stats": {
+      "chars": 1899,
+      "lines": 14,
+      "words": 267,
+      "unique_urls": 0
+    },
+    "personas": [
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "role": "Adversarial truth-seeker",
+        "lens": "Overclaims, missing evidence, demo theater vs product truth, honesty gaps.",
+        "color": "#f97316",
+        "finding_count": 2,
+        "findings": [
+          {
+            "id": "ske-fff1fc6a04",
+            "persona_id": "skeptic",
+            "severity": "medium",
+            "claim": "Seed brief claims live WebSearch/WebFetch citations \u2014 peer must spot-check URLs still resolve",
+            "evidence": "Research for brief-001 was fetched live",
+            "suggested_fix": "Smoke should assert \u22655 unique http citations and sample-fetch 2 URLs.",
+            "topic": "citations"
+          },
+          {
+            "id": "ske-669d1f4015",
+            "persona_id": "skeptic",
+            "severity": "low",
+            "claim": "Pipeline stages are simulated peer review, not a live multi-model debate",
+            "evidence": "searcher \u2192 synthesizer \u2192 simulated peer reviewer",
+            "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+            "topic": "honesty"
+          }
+        ],
+        "summary": "Skeptic filed 2 finding(s) via Overclaims, missing evidence, demo theater vs product truth, honesty gaps."
+      },
+      {
+        "id": "security",
+        "name": "Security",
+        "role": "Blast-radius & trust boundary reviewer",
+        "lens": "Irreversible actions, synthetic vs real data, path guards, publish/send gates.",
+        "color": "#ef4444",
+        "finding_count": 2,
+        "findings": [
+          {
+            "id": "sec-3670baf615",
+            "persona_id": "security",
+            "severity": "high",
+            "claim": "Local-only bind 127.0.0.1:4330 \u2014 good; no firm/client topics in NEXT_TOPICS",
+            "evidence": "h sports logistics. Not collections / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Model",
+            "suggested_fix": "Keep topic filter in POST /api/topics; reject kpdlawgroup-shaped strings.",
+            "topic": "scope"
+          },
+          {
+            "id": "sec-c4feab30d1",
+            "persona_id": "security",
+            "severity": "medium",
+            "claim": "POST /api/topics appends without rate limit \u2014 fine for local burn, not public",
+            "evidence": "use Run next topic to append",
+            "suggested_fix": "Document local-only; never expose beyond loopback.",
+            "topic": "exposure"
+          }
+        ],
+        "summary": "Security filed 2 finding(s) via Irreversible actions, synthetic vs real data, path guards, publish/send gates."
+      },
+      {
+        "id": "ux_delight",
+        "name": "UX Delight",
+        "role": "Operator experience & reveal polish",
+        "lens": "Cognitive load, spoken-script length, demo friction, glossary clarity, delight.",
+        "color": "#a855f7",
+        "finding_count": 2,
+        "findings": [
+          {
+            "id": "ux_-872fce1d89",
+            "persona_id": "ux_delight",
+            "severity": "medium",
+            "claim": "2-minute how-to is crisp; home should surface brief line count + citation count",
+            "evidence": "## 2-minute how-to",
+            "suggested_fix": "Dashboard hero: lines / citations / peer-review verdict at a glance.",
+            "topic": "dashboard"
+          },
+          {
+            "id": "ux_-721ac9dbca",
+            "persona_id": "ux_delight",
+            "severity": "low",
+            "claim": "Ten NEXT_TOPICS are heavy follow-ups \u2014 good burn fuel, dense for a first glance",
+            "evidence": "s / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Models diverge: metering, routine unde",
+            "suggested_fix": "UI: show top 3 topics + '7 more' expander.",
+            "topic": "density"
+          }
+        ],
+        "summary": "UX Delight filed 2 finding(s) via Cognitive load, spoken-script length, demo friction, glossary clarity, delight."
+      },
+      {
+        "id": "operator",
+        "name": "Operator / On-call",
+        "role": "Day-2 operability",
+        "lens": "Runbooks, ports, reset/recover, failure modes, preflight checklists.",
+        "color": "#22c55e",
+        "finding_count": 2,
+        "findings": [
+          {
+            "id": "ope-fd8f91cfc0",
+            "persona_id": "operator",
+            "severity": "high",
+            "claim": "run.sh + smoke_test.sh are the contract \u2014 brief \u2265200 lines and \u22655 citations",
+            "evidence": "./smoke_test.sh  # health + brief \u2265200 lines",
+            "suggested_fix": "CI-less burn: always run smoke after regenerating brief-001.",
+            "topic": "smoke"
+          },
+          {
+            "id": "ope-3bf5dda823",
+            "persona_id": "operator",
+            "severity": "medium",
+            "claim": "pkill by script path can race if two forges start together",
+            "evidence": "starts http://127.0.0.1:4330/",
+            "suggested_fix": "Prefer PORT env + flock or health-check before pkill in future.",
+            "topic": "ports"
+          }
+        ],
+        "summary": "Operator / On-call filed 2 finding(s) via Runbooks, ports, reset/recover, failure modes, preflight checklists."
+      },
+      {
+        "id": "product",
+        "name": "Product Strategist",
+        "role": "Fit & narrative ownership",
+        "lens": "Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity.",
+        "color": "#38bdf8",
+        "finding_count": 2,
+        "findings": [
+          {
+            "id": "pro-88b2a58e65",
+            "persona_id": "product",
+            "severity": "medium",
+            "claim": "Hold/Apply brief topic maps cleanly onto Bonsai + Draft Day adjacency",
+            "evidence": "Hold vs Apply, CAS, verification gates",
+            "suggested_fix": "Cross-link Arena reviews of Bonsai reveal \u2194 Forge brief in burn notes.",
+            "topic": "fleet_fit"
+          },
+          {
+            "id": "pro-8097af8ef2",
+            "persona_id": "product",
+            "severity": "low",
+            "claim": "NEXT_TOPICS intentionally skip law firm \u2014 aligns with burn rules",
+            "evidence": "h sports logistics. Not collections / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Model",
+            "suggested_fix": "Keep exclusion list in DESIGN when topics regenerate.",
+            "topic": "scope"
+          }
+        ],
+        "summary": "Product Strategist filed 2 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity."
+      }
+    ],
+    "findings": [
+      {
+        "id": "ske-fff1fc6a04",
+        "persona_id": "skeptic",
+        "severity": "medium",
+        "claim": "Seed brief claims live WebSearch/WebFetch citations \u2014 peer must spot-check URLs still resolve",
+        "evidence": "Research for brief-001 was fetched live",
+        "suggested_fix": "Smoke should assert \u22655 unique http citations and sample-fetch 2 URLs.",
+        "topic": "citations"
+      },
+      {
+        "id": "ske-669d1f4015",
+        "persona_id": "skeptic",
+        "severity": "low",
+        "claim": "Pipeline stages are simulated peer review, not a live multi-model debate",
+        "evidence": "searcher \u2192 synthesizer \u2192 simulated peer reviewer",
+        "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "topic": "honesty"
+      },
+      {
+        "id": "sec-3670baf615",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "Local-only bind 127.0.0.1:4330 \u2014 good; no firm/client topics in NEXT_TOPICS",
+        "evidence": "h sports logistics. Not collections / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Model",
+        "suggested_fix": "Keep topic filter in POST /api/topics; reject kpdlawgroup-shaped strings.",
+        "topic": "scope"
+      },
+      {
+        "id": "sec-c4feab30d1",
+        "persona_id": "security",
+        "severity": "medium",
+        "claim": "POST /api/topics appends without rate limit \u2014 fine for local burn, not public",
+        "evidence": "use Run next topic to append",
+        "suggested_fix": "Document local-only; never expose beyond loopback.",
+        "topic": "exposure"
+      },
+      {
+        "id": "ux_-872fce1d89",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "2-minute how-to is crisp; home should surface brief line count + citation count",
+        "evidence": "## 2-minute how-to",
+        "suggested_fix": "Dashboard hero: lines / citations / peer-review verdict at a glance.",
+        "topic": "dashboard"
+      },
+      {
+        "id": "ux_-721ac9dbca",
+        "persona_id": "ux_delight",
+        "severity": "low",
+        "claim": "Ten NEXT_TOPICS are heavy follow-ups \u2014 good burn fuel, dense for a first glance",
+        "evidence": "s / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Models diverge: metering, routine unde",
+        "suggested_fix": "UI: show top 3 topics + '7 more' expander.",
+        "topic": "density"
+      },
+      {
+        "id": "ope-fd8f91cfc0",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "run.sh + smoke_test.sh are the contract \u2014 brief \u2265200 lines and \u22655 citations",
+        "evidence": "./smoke_test.sh  # health + brief \u2265200 lines",
+        "suggested_fix": "CI-less burn: always run smoke after regenerating brief-001.",
+        "topic": "smoke"
+      },
+      {
+        "id": "ope-3bf5dda823",
+        "persona_id": "operator",
+        "severity": "medium",
+        "claim": "pkill by script path can race if two forges start together",
+        "evidence": "starts http://127.0.0.1:4330/",
+        "suggested_fix": "Prefer PORT env + flock or health-check before pkill in future.",
+        "topic": "ports"
+      },
+      {
+        "id": "pro-88b2a58e65",
+        "persona_id": "product",
+        "severity": "medium",
+        "claim": "Hold/Apply brief topic maps cleanly onto Bonsai + Draft Day adjacency",
+        "evidence": "Hold vs Apply, CAS, verification gates",
+        "suggested_fix": "Cross-link Arena reviews of Bonsai reveal \u2194 Forge brief in burn notes.",
+        "topic": "fleet_fit"
+      },
+      {
+        "id": "pro-8097af8ef2",
+        "persona_id": "product",
+        "severity": "low",
+        "claim": "NEXT_TOPICS intentionally skip law firm \u2014 aligns with burn rules",
+        "evidence": "h sports logistics. Not collections / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Model",
+        "suggested_fix": "Keep exclusion list in DESIGN when topics regenerate.",
+        "topic": "scope"
+      }
+    ],
+    "persona_count": 5,
+    "finding_count": 10
+  },
+  "chair": {
+    "chair": "Chair",
+    "verdict": "hold",
+    "risk_score": 29,
+    "adjusted_score": 29,
+    "summary": "Chair merges 10 findings from 5 personas \u2192 verdict=hold, must-fix=2, nice-to-haves=8, disagreements=1.",
+    "consensus_table": [
+      {
+        "topic": "scope",
+        "worst_severity": "high",
+        "persona_count": 2,
+        "personas": [
+          "product",
+          "security"
+        ],
+        "headline": "Local-only bind 127.0.0.1:4330 \u2014 good; no firm/client topics in NEXT_TOPICS",
+        "suggested_fix": "Keep topic filter in POST /api/topics; reject kpdlawgroup-shaped strings.",
+        "finding_ids": [
+          "sec-3670baf615",
+          "pro-8097af8ef2"
+        ]
+      },
+      {
+        "topic": "smoke",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "run.sh + smoke_test.sh are the contract \u2014 brief \u2265200 lines and \u22655 citations",
+        "suggested_fix": "CI-less burn: always run smoke after regenerating brief-001.",
+        "finding_ids": [
+          "ope-fd8f91cfc0"
+        ]
+      },
+      {
+        "topic": "citations",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "Seed brief claims live WebSearch/WebFetch citations \u2014 peer must spot-check URLs still resolve",
+        "suggested_fix": "Smoke should assert \u22655 unique http citations and sample-fetch 2 URLs.",
+        "finding_ids": [
+          "ske-fff1fc6a04"
+        ]
+      },
+      {
+        "topic": "exposure",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "POST /api/topics appends without rate limit \u2014 fine for local burn, not public",
+        "suggested_fix": "Document local-only; never expose beyond loopback.",
+        "finding_ids": [
+          "sec-c4feab30d1"
+        ]
+      },
+      {
+        "topic": "dashboard",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "2-minute how-to is crisp; home should surface brief line count + citation count",
+        "suggested_fix": "Dashboard hero: lines / citations / peer-review verdict at a glance.",
+        "finding_ids": [
+          "ux_-872fce1d89"
+        ]
+      },
+      {
+        "topic": "ports",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "pkill by script path can race if two forges start together",
+        "suggested_fix": "Prefer PORT env + flock or health-check before pkill in future.",
+        "finding_ids": [
+          "ope-3bf5dda823"
+        ]
+      },
+      {
+        "topic": "fleet_fit",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Hold/Apply brief topic maps cleanly onto Bonsai + Draft Day adjacency",
+        "suggested_fix": "Cross-link Arena reviews of Bonsai reveal \u2194 Forge brief in burn notes.",
+        "finding_ids": [
+          "pro-88b2a58e65"
+        ]
+      },
+      {
+        "topic": "honesty",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "Pipeline stages are simulated peer review, not a live multi-model debate",
+        "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "finding_ids": [
+          "ske-669d1f4015"
+        ]
+      },
+      {
+        "topic": "density",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Ten NEXT_TOPICS are heavy follow-ups \u2014 good burn fuel, dense for a first glance",
+        "suggested_fix": "UI: show top 3 topics + '7 more' expander.",
+        "finding_ids": [
+          "ux_-721ac9dbca"
+        ]
+      }
+    ],
+    "disagreements": [
+      {
+        "topic": "scope",
+        "severity_spread": [
+          "high",
+          "low"
+        ],
+        "personas": [
+          "product",
+          "security"
+        ],
+        "notes": "Personas disagree on urgency for 'scope': high, low"
+      }
+    ],
+    "must_fix_before_ship": [
+      {
+        "id": "ope-fd8f91cfc0",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "run.sh + smoke_test.sh are the contract \u2014 brief \u2265200 lines and \u22655 citations",
+        "suggested_fix": "CI-less burn: always run smoke after regenerating brief-001.",
+        "evidence": "./smoke_test.sh  # health + brief \u2265200 lines"
+      },
+      {
+        "id": "sec-3670baf615",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "Local-only bind 127.0.0.1:4330 \u2014 good; no firm/client topics in NEXT_TOPICS",
+        "suggested_fix": "Keep topic filter in POST /api/topics; reject kpdlawgroup-shaped strings.",
+        "evidence": "h sports logistics. Not collections / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Model"
+      }
+    ],
+    "nice_to_haves": [
+      {
+        "id": "ope-3bf5dda823",
+        "persona_id": "operator",
+        "severity": "medium",
+        "claim": "pkill by script path can race if two forges start together",
+        "suggested_fix": "Prefer PORT env + flock or health-check before pkill in future.",
+        "evidence": "starts http://127.0.0.1:4330/"
+      },
+      {
+        "id": "pro-88b2a58e65",
+        "persona_id": "product",
+        "severity": "medium",
+        "claim": "Hold/Apply brief topic maps cleanly onto Bonsai + Draft Day adjacency",
+        "suggested_fix": "Cross-link Arena reviews of Bonsai reveal \u2194 Forge brief in burn notes.",
+        "evidence": "Hold vs Apply, CAS, verification gates"
+      },
+      {
+        "id": "sec-c4feab30d1",
+        "persona_id": "security",
+        "severity": "medium",
+        "claim": "POST /api/topics appends without rate limit \u2014 fine for local burn, not public",
+        "suggested_fix": "Document local-only; never expose beyond loopback.",
+        "evidence": "use Run next topic to append"
+      },
+      {
+        "id": "ske-fff1fc6a04",
+        "persona_id": "skeptic",
+        "severity": "medium",
+        "claim": "Seed brief claims live WebSearch/WebFetch citations \u2014 peer must spot-check URLs still resolve",
+        "suggested_fix": "Smoke should assert \u22655 unique http citations and sample-fetch 2 URLs.",
+        "evidence": "Research for brief-001 was fetched live"
+      },
+      {
+        "id": "ux_-872fce1d89",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "2-minute how-to is crisp; home should surface brief line count + citation count",
+        "suggested_fix": "Dashboard hero: lines / citations / peer-review verdict at a glance.",
+        "evidence": "## 2-minute how-to"
+      },
+      {
+        "id": "pro-8097af8ef2",
+        "persona_id": "product",
+        "severity": "low",
+        "claim": "NEXT_TOPICS intentionally skip law firm \u2014 aligns with burn rules",
+        "suggested_fix": "Keep exclusion list in DESIGN when topics regenerate.",
+        "evidence": "h sports logistics. Not collections / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Model"
+      },
+      {
+        "id": "ske-669d1f4015",
+        "persona_id": "skeptic",
+        "severity": "low",
+        "claim": "Pipeline stages are simulated peer review, not a live multi-model debate",
+        "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "evidence": "searcher \u2192 synthesizer \u2192 simulated peer reviewer"
+      },
+      {
+        "id": "ux_-721ac9dbca",
+        "persona_id": "ux_delight",
+        "severity": "low",
+        "claim": "Ten NEXT_TOPICS are heavy follow-ups \u2014 good burn fuel, dense for a first glance",
+        "suggested_fix": "UI: show top 3 topics + '7 more' expander.",
+        "evidence": "s / law firm.  1. **Grok Bot fleet token-pool discipline** \u2014 When weekly Grok Bot burn vs Cursor Models diverge: metering, routine unde"
+      }
+    ],
+    "per_persona": [
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "color": "#f97316",
+        "finding_count": 2,
+        "blocker": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 5
+      },
+      {
+        "id": "security",
+        "name": "Security",
+        "color": "#ef4444",
+        "finding_count": 2,
+        "blocker": 0,
+        "high": 1,
+        "medium": 1,
+        "low": 0,
+        "nit": 0,
+        "risk_contribution": 7
+      },
+      {
+        "id": "ux_delight",
+        "name": "UX Delight",
+        "color": "#a855f7",
+        "finding_count": 2,
+        "blocker": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 5
+      },
+      {
+        "id": "operator",
+        "name": "Operator / On-call",
+        "color": "#22c55e",
+        "finding_count": 2,
+        "blocker": 0,
+        "high": 1,
+        "medium": 1,
+        "low": 0,
+        "nit": 0,
+        "risk_contribution": 7
+      },
+      {
+        "id": "product",
+        "name": "Product Strategist",
+        "color": "#38bdf8",
+        "finding_count": 2,
+        "blocker": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 5
+      }
+    ],
+    "counts": {
+      "findings": 10,
+      "must_fix": 2,
+      "nice_to_haves": 8,
+      "disagreements": 1,
+      "topics": 9,
+      "blocker": 0,
+      "high": 2,
+      "medium": 5,
+      "low": 3,
+      "nit": 0
+    }
+  }
+}

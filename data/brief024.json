@@ -1,0 +1,112 @@
+{
+  "brief_id": "brief-024",
+  "title": "/correct CI Encoding for Agent Repos",
+  "source": "agent-brief-forge/out/brief-024.md + peer-review-024.json + citations-024.json",
+  "parent_briefs": [
+    "brief-001",
+    "brief-004",
+    "brief-007",
+    "brief-012",
+    "brief-016"
+  ],
+  "paired_with": {
+    "brief-007": "Pre-ops / PREOPS_GATES — should the agent touch the target at all?",
+    "brief-012": "Draft Day / DRAFT-DAY-GATES — competing verified drafts → draft PR",
+    "brief-004": "Peer Arena critique-before-merge — independent critic on the artifact"
+  },
+  "peer_review": {
+    "verdict": "accept_with_revisions_noted",
+    "independence": "simulated peer (same model family) — prefer external /interrogate before fleet law"
+  },
+  "timezone": "America/New_York",
+  "standing_rule": "arch → types → lint/CI (error names the fix) → tests → docs last; prove each check on a past mistake; never merge without Boyd OK.",
+  "encoding_ladder": [
+    "architecture (delete old path / one owner)",
+    "types (illegal state unrepresentable)",
+    "lint/CI (required check exits non-zero; error names the fix)",
+    "tests (behavior, not internals)",
+    "docs / agent rules (judgment only — last)"
+  ],
+  "gate_properties": [
+    "exit non-zero on violation",
+    "deterministic",
+    "fail closed when checker cannot run",
+    "wired as required GitHub status check"
+  ],
+  "three_gates": {
+    "preops": "Should this agent touch this target at all? → PREOPS_GATES.md",
+    "draft_day": "Did competing verified drafts produce a draft PR? → DRAFT-DAY-GATES.md",
+    "correct_ci": "Can the next agent replay a known footgun into main? → required checks + rule table"
+  },
+  "scorecard": {
+    "auto_merge": 0,
+    "docs_only_lessons": 0,
+    "advisory_only_arch_job": 0,
+    "self_merge_or_self_approve": 0,
+    "agent_pr_non_draft_without_human_ready": 0,
+    "unproven_checks": 0,
+    "synthetic_sold_as_live": 0,
+    "burn_merge_or_send": 0,
+    "utc_only_stamps": 0,
+    "kpd_bleed": 0,
+    "timezone": "America/New_York"
+  },
+  "denied_tools": [
+    "auto-merge",
+    "force-merge",
+    "bypass-correct-ci",
+    "gh pr merge from burn / Draft Day candidate",
+    "agent self-approve / self-LGTM",
+    "enable GitHub auto-merge without human_ok",
+    "mark agent PR ready without human_ready label",
+    "advisory architecture job that exits 0 sold as encode",
+    "docs-only AGENTS.md lesson without machine gate",
+    "edit branch protection / rulesets as agent",
+    "KPD / firm / client encode targets",
+    "burn outbound / cloud agents from research burn"
+  ],
+  "refused_post_prefixes": [
+    "/api/auto-merge",
+    "/api/force-merge",
+    "/api/bypass-correct-ci"
+  ],
+  "laws": [
+    {
+      "id": "ladder",
+      "text": "Order of ops is law: arch → types → lint/CI → tests → docs. Docs-only lessons that agents re-violate fail the scorecard (docs_only_lessons=0)."
+    },
+    {
+      "id": "required-nonzero",
+      "text": "A real gate exits non-zero, is deterministic, fails closed, and is a required status check. Logging that exits 0 is observation, not encode."
+    },
+    {
+      "id": "auto-merge-zero",
+      "text": "auto_merge=0 — never merge without Boyd OK; Draft Day / burn never enable auto-merge or gh pr merge."
+    },
+    {
+      "id": "prove-past-mistake",
+      "text": "Every new check must fail on a real past-mistake fixture; unproven_checks=0."
+    },
+    {
+      "id": "three-gates",
+      "text": "Do not collapse Pre-ops, Draft Day, and Correct CI into one LGTM. Peer Arena LGTM ≠ pre-ops Apply ≠ encode complete."
+    },
+    {
+      "id": "agent-draft",
+      "text": "Agent-authored PRs stay draft unless human_ready; writer identity never LGTMs or merges its own PR."
+    },
+    {
+      "id": "live-vs-synthetic",
+      "text": "Every gate report stamps LIVE vs SYNTHETIC; sandbox demo CI is never sold as BoydVC main protection."
+    },
+    {
+      "id": "america-new-york",
+      "text": "America/New_York stamps on encode tickets and scorecards; utc_only_stamps=0."
+    },
+    {
+      "id": "no-kpd-no-burn-merge",
+      "text": "Private BoydVC / personal-GitHub agent tooling only. No KPD. No burn outbound. No cloud agents from research burn. burn_merge_or_send=0."
+    }
+  ],
+  "separation": "brief-007 = pre-ops touch-prod card; brief-012 = Draft Day arena→draft PR; brief-004 = Peer Arena critique; brief-024 = /correct CI encoding specialization (mistake class → structure → required merge-blocking check)"
+}

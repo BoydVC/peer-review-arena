@@ -1,0 +1,881 @@
+{
+  "review": {
+    "schema": "peer-review-arena/v1",
+    "draft_id": "bonsai-reveal",
+    "title": "Bonsai REVEAL_DRAFT",
+    "source": "seed:bonsai-reveal",
+    "kind": "bonsai_reveal",
+    "reviewed_at": "2026-10-27T00:38:33-04:00",
+    "draft_stats": {
+      "chars": 6279,
+      "lines": 88,
+      "words": 978,
+      "unique_urls": 3
+    },
+    "personas": [
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "role": "Adversarial truth-seeker",
+        "lens": "Overclaims, missing evidence, demo theater vs product truth, honesty gaps.",
+        "color": "#f97316",
+        "finding_count": 3,
+        "findings": [
+          {
+            "id": "ske-d1497f1409",
+            "persona_id": "skeptic",
+            "severity": "high",
+            "claim": "Pass-11 numbers may drift before Thursday send if Origin SHA moves",
+            "evidence": "26 ~9:35 PM ET for pass 11 @ e41f0d6 (agent bc-15e97a35). Numbers and attachments below match `/workspace/tokenmax/bonsai/STAT",
+            "suggested_fix": "Bind the send checklist to STATUS.md SHA; if SHA \u2260 e41f0d6, regenerate numbers + attachments before send.",
+            "topic": "freshness"
+          },
+          {
+            "id": "ske-327e7a5ade",
+            "persona_id": "skeptic",
+            "severity": "medium",
+            "claim": "Honesty line admits catalog-vs-discovery gap but spoken script may oversell 'ingests a pile'",
+            "evidence": "he demo corpus is a fixed catalog of 12 mistake types (the planted repeats). Some detectors may still be thinner than a full `/correct` loop (d",
+            "suggested_fix": "Keep the spoken line 'synthetic mistakes' and add one beat: 'twelve planted types, not live history discovery yet.'",
+            "topic": "honesty"
+          },
+          {
+            "id": "ske-17a2c18f98",
+            "persona_id": "skeptic",
+            "severity": "low",
+            "claim": "'Apply-all ends 11 held / 1 biting' needs the remaining biter named in the talk",
+            "evidence": "\"apply all\" ends **11 held / 1 biting**; **155** tests; **28**-check verify; **7** adversarial checks; lint clean. Hold / Apply",
+            "suggested_fix": "Name the remaining biter aloud (honesty, not failure) so the audience doesn't invent a bug.",
+            "topic": "demo_narrative"
+          }
+        ],
+        "summary": "Skeptic filed 3 finding(s) via Overclaims, missing evidence, demo theater vs product truth, honesty gaps."
+      },
+      {
+        "id": "security",
+        "name": "Security",
+        "role": "Blast-radius & trust boundary reviewer",
+        "lens": "Irreversible actions, synthetic vs real data, path guards, publish/send gates.",
+        "color": "#ef4444",
+        "finding_count": 4,
+        "findings": [
+          {
+            "id": "sec-6b9c68abb0",
+            "persona_id": "security",
+            "severity": "blocker",
+            "claim": "Draft must never be sent from a burn/subagent session",
+            "evidence": "file is a draft. **Do not send from a burn/subagent session.**",
+            "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+            "topic": "send_gate"
+          },
+          {
+            "id": "sec-eeeaee22e3",
+            "persona_id": "security",
+            "severity": "high",
+            "claim": "Repo is still a private Origin draft \u2014 reveal must not imply public publish",
+            "evidence": "ursor Origin draft `boydvc/tmp-6e67f983fcd2585c` @ e41f0d6. Want it moved to a private **BoydVC/bonsai** repo like your other projects? S",
+            "suggested_fix": "Keep 'Where it lives' as Origin draft; require explicit OK before BoydVC/bonsai move.",
+            "topic": "publish_boundary"
+          },
+          {
+            "id": "sec-805780a9fe",
+            "persona_id": "security",
+            "severity": "medium",
+            "claim": "SYNTHETIC playground claim is strong \u2014 verify every attached screenshot still shows the badge",
+            "evidence": "ents playground and every screen says SYNTHETIC.  **Numbers (pass 11 @ e41f0d6):** 60 synthetic mistakes \u2192 12 clusters; \"apply all\" ends",
+            "suggested_fix": "Attachment preflight: open each PNG/webm and confirm SYNTHETIC chrome before send.",
+            "topic": "honesty"
+          },
+          {
+            "id": "sec-da6fa18078",
+            "persona_id": "security",
+            "severity": "low",
+            "claim": "Blast-radius path guards mentioned but not demonstrated in the spoken path",
+            "evidence": "d pstack's verify / blast-radius ideas. - Built to sit next to Draft Day: Draft Day builds things; Bonsai keeps the next b",
+            "suggested_fix": "Optional 10s aside: point at path-guard in verify or adversarial output if time.",
+            "topic": "verify"
+          }
+        ],
+        "summary": "Security filed 4 finding(s) via Irreversible actions, synthetic vs real data, path guards, publish/send gates."
+      },
+      {
+        "id": "ux_delight",
+        "name": "UX Delight",
+        "role": "Operator experience & reveal polish",
+        "lens": "Cognitive load, spoken-script length, demo friction, glossary clarity, delight.",
+        "color": "#a855f7",
+        "finding_count": 5,
+        "findings": [
+          {
+            "id": "ux_-9f4bbbe4e5",
+            "persona_id": "ux_delight",
+            "severity": "medium",
+            "claim": "Remaining '1 biting' after apply-all should be framed as honesty, not a broken demo",
+            "evidence": "ng**). Point at the remaining biter as honesty, not failure. 6. Trust-but-verify line: `npm test`, `npm run verify`, `npm run adversaria",
+            "suggested_fix": "Agree the spoken beat with Skeptic before Thursday; one shared line.",
+            "topic": "demo_narrative"
+          },
+          {
+            "id": "ux_-9cf2d41be9",
+            "persona_id": "ux_delight",
+            "severity": "medium",
+            "claim": "Spoken script targets 75\u201385s \u2014 good; two-minute how-to is operator, not spoken",
+            "evidence": "t (copy into notes; ~75\u201385 seconds)  > Bonsai is the poteto idea from your bookmarks: stop micromanaging agents \u2014 encode the",
+            "suggested_fix": "Copy only the spoken block into notes; keep operator checklist off-screen during the talk.",
+            "topic": "script_length"
+          },
+          {
+            "id": "ux_-fcd62d1690",
+            "persona_id": "ux_delight",
+            "severity": "high",
+            "claim": "Demo path has six steps + optional apply-all \u2014 mid-talk Reset is a known footgun",
+            "evidence": "Do not click Reset again mid-talk",
+            "suggested_fix": "Put a sticky 'NO RESET' note on the demo machine; prefer CLI demo:reset only in preflight.",
+            "topic": "demo_friction"
+          },
+          {
+            "id": "ux_-5e50cb7763",
+            "persona_id": "ux_delight",
+            "severity": "low",
+            "claim": "Hold / Apply / Revert glossary is in header \u2014 say it once at flaky-date cluster",
+            "evidence": "iff. Say out loud: *Hold = add the guard. Apply = rewrite the smell. Revert = undo.* 5. Optional: **`npm run demo:apply-all`** \u2014 t",
+            "suggested_fix": "Practice the three-word glossary aloud once; don't re-explain on every prune.",
+            "topic": "glossary"
+          },
+          {
+            "id": "ux_-f343a9f987",
+            "persona_id": "ux_delight",
+            "severity": "nit",
+            "claim": "Attachment table includes webm \u2014 silent clip is reveal-friendly",
+            "evidence": "ax/bonsai/artifacts/demo-story.webm` | ~30 s motion clip ending 11 held / 1 biting (silent) |  **Optional:** `home-history.pn",
+            "suggested_fix": "Confirm autoplay/mute works in the reveal channel before Thursday.",
+            "topic": "attachments"
+          }
+        ],
+        "summary": "UX Delight filed 5 finding(s) via Cognitive load, spoken-script length, demo friction, glossary clarity, delight."
+      },
+      {
+        "id": "operator",
+        "name": "Operator / On-call",
+        "role": "Day-2 operability",
+        "lens": "Runbooks, ports, reset/recover, failure modes, preflight checklists.",
+        "color": "#22c55e",
+        "finding_count": 4,
+        "findings": [
+          {
+            "id": "ope-bc1a341e91",
+            "persona_id": "operator",
+            "severity": "high",
+            "claim": "Port 4317 must be free; Next.js 'N' badge means wrong serve mode",
+            "evidence": "e CLI). Open http://127.0.0.1:4317 \u2014 you should **not** see the Next.js dev \"N\" badge. 3. Second terminal: **`npm run demo:s",
+            "suggested_fix": "Preflight: lsof/curl 4317; abort if badge present; use serve --prod only.",
+            "topic": "ports"
+          },
+          {
+            "id": "ope-fb746d3cf1",
+            "persona_id": "operator",
+            "severity": "high",
+            "claim": "Three green gates required: test, verify (28), adversarial (7)",
+            "evidence": "test` \u2014 green. 2. `npm run verify` \u2014 green (28 checks). 3. `npm run adversarial` (alias: `interrogate` if still present) \u2014",
+            "suggested_fix": "Run all three ~5 min before talk; paste exit codes into a sticky note.",
+            "topic": "preflight"
+          },
+          {
+            "id": "ope-7378a523f2",
+            "persona_id": "operator",
+            "severity": "medium",
+            "claim": "demo:story may need a single reload if tree does not live-refresh",
+            "evidence": "te). When it exits, reload once if the tree has not live-refreshed. 4. Open **http://127.0.0.1:4317/?cluster=flaky-date-p",
+            "suggested_fix": "Script the reload as step 3b so it doesn't look like a hang on stage.",
+            "topic": "failure_mode"
+          },
+          {
+            "id": "ope-90362a2759",
+            "persona_id": "operator",
+            "severity": "low",
+            "claim": "Deep-link cluster query is brittle if cluster id renames",
+            "evidence": "p://127.0.0.1:4317/?cluster=flaky-date-parse** \u2014 evidence, ranked encodings (type beats test beats lint beats prose), before/after dif",
+            "suggested_fix": "Pin cluster id in STATUS.md; if renamed, update reveal draft same commit.",
+            "topic": "runbook"
+          }
+        ],
+        "summary": "Operator / On-call filed 4 finding(s) via Runbooks, ports, reset/recover, failure modes, preflight checklists."
+      },
+      {
+        "id": "product",
+        "name": "Product Strategist",
+        "role": "Fit & narrative ownership",
+        "lens": "Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity.",
+        "color": "#38bdf8",
+        "finding_count": 3,
+        "findings": [
+          {
+            "id": "pro-659dd58f41",
+            "persona_id": "product",
+            "severity": "medium",
+            "claim": "Bookmark lineage (/correct, trust pyramid, Draft Day adjacency) is the ownership hook",
+            "evidence": "*Why it's yours** - Straight out of your bookmarks: poteto's `/correct` and bonsai post, the trust-layer pyramid (codebase \u2192 static analysis",
+            "suggested_fix": "Lead with 'why it's yours' before numbers so the reveal isn't a feature dump.",
+            "topic": "narrative"
+          },
+          {
+            "id": "pro-1eb6a4df99",
+            "persona_id": "product",
+            "severity": "low",
+            "claim": "Ask to move Origin draft \u2192 BoydVC/bonsai is a clear next CTA",
+            "evidence": "oved to a private **BoydVC/bonsai** repo like your other projects? Say the word after the reveal.  ---  ## Two-minute how-t",
+            "suggested_fix": "Keep CTA after honesty line; don't bury under attachments.",
+            "topic": "cta"
+          },
+          {
+            "id": "pro-24bc45c839",
+            "persona_id": "product",
+            "severity": "nit",
+            "claim": "Target send Thu Oct 29 ~5 PM ET sits before ~7:42 PM reset \u2014 good pacing",
+            "evidence": "sent)  Target send: Thu Oct 29, 2026 ~5 PM ET (before the ~7:42 PM ET weekly reset). Updated Mon Oct 26 ~9:35 PM ET for",
+            "suggested_fix": "No change; confirm calendar block still clear.",
+            "topic": "timing"
+          }
+        ],
+        "summary": "Product Strategist filed 3 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity."
+      }
+    ],
+    "findings": [
+      {
+        "id": "ske-d1497f1409",
+        "persona_id": "skeptic",
+        "severity": "high",
+        "claim": "Pass-11 numbers may drift before Thursday send if Origin SHA moves",
+        "evidence": "26 ~9:35 PM ET for pass 11 @ e41f0d6 (agent bc-15e97a35). Numbers and attachments below match `/workspace/tokenmax/bonsai/STAT",
+        "suggested_fix": "Bind the send checklist to STATUS.md SHA; if SHA \u2260 e41f0d6, regenerate numbers + attachments before send.",
+        "topic": "freshness"
+      },
+      {
+        "id": "ske-327e7a5ade",
+        "persona_id": "skeptic",
+        "severity": "medium",
+        "claim": "Honesty line admits catalog-vs-discovery gap but spoken script may oversell 'ingests a pile'",
+        "evidence": "he demo corpus is a fixed catalog of 12 mistake types (the planted repeats). Some detectors may still be thinner than a full `/correct` loop (d",
+        "suggested_fix": "Keep the spoken line 'synthetic mistakes' and add one beat: 'twelve planted types, not live history discovery yet.'",
+        "topic": "honesty"
+      },
+      {
+        "id": "ske-17a2c18f98",
+        "persona_id": "skeptic",
+        "severity": "low",
+        "claim": "'Apply-all ends 11 held / 1 biting' needs the remaining biter named in the talk",
+        "evidence": "\"apply all\" ends **11 held / 1 biting**; **155** tests; **28**-check verify; **7** adversarial checks; lint clean. Hold / Apply",
+        "suggested_fix": "Name the remaining biter aloud (honesty, not failure) so the audience doesn't invent a bug.",
+        "topic": "demo_narrative"
+      },
+      {
+        "id": "sec-6b9c68abb0",
+        "persona_id": "security",
+        "severity": "blocker",
+        "claim": "Draft must never be sent from a burn/subagent session",
+        "evidence": "file is a draft. **Do not send from a burn/subagent session.**",
+        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "topic": "send_gate"
+      },
+      {
+        "id": "sec-eeeaee22e3",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "Repo is still a private Origin draft \u2014 reveal must not imply public publish",
+        "evidence": "ursor Origin draft `boydvc/tmp-6e67f983fcd2585c` @ e41f0d6. Want it moved to a private **BoydVC/bonsai** repo like your other projects? S",
+        "suggested_fix": "Keep 'Where it lives' as Origin draft; require explicit OK before BoydVC/bonsai move.",
+        "topic": "publish_boundary"
+      },
+      {
+        "id": "sec-805780a9fe",
+        "persona_id": "security",
+        "severity": "medium",
+        "claim": "SYNTHETIC playground claim is strong \u2014 verify every attached screenshot still shows the badge",
+        "evidence": "ents playground and every screen says SYNTHETIC.  **Numbers (pass 11 @ e41f0d6):** 60 synthetic mistakes \u2192 12 clusters; \"apply all\" ends",
+        "suggested_fix": "Attachment preflight: open each PNG/webm and confirm SYNTHETIC chrome before send.",
+        "topic": "honesty"
+      },
+      {
+        "id": "ux_-9f4bbbe4e5",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Remaining '1 biting' after apply-all should be framed as honesty, not a broken demo",
+        "evidence": "ng**). Point at the remaining biter as honesty, not failure. 6. Trust-but-verify line: `npm test`, `npm run verify`, `npm run adversaria",
+        "suggested_fix": "Agree the spoken beat with Skeptic before Thursday; one shared line.",
+        "topic": "demo_narrative"
+      },
+      {
+        "id": "sec-da6fa18078",
+        "persona_id": "security",
+        "severity": "low",
+        "claim": "Blast-radius path guards mentioned but not demonstrated in the spoken path",
+        "evidence": "d pstack's verify / blast-radius ideas. - Built to sit next to Draft Day: Draft Day builds things; Bonsai keeps the next b",
+        "suggested_fix": "Optional 10s aside: point at path-guard in verify or adversarial output if time.",
+        "topic": "verify"
+      },
+      {
+        "id": "ux_-9cf2d41be9",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Spoken script targets 75\u201385s \u2014 good; two-minute how-to is operator, not spoken",
+        "evidence": "t (copy into notes; ~75\u201385 seconds)  > Bonsai is the poteto idea from your bookmarks: stop micromanaging agents \u2014 encode the",
+        "suggested_fix": "Copy only the spoken block into notes; keep operator checklist off-screen during the talk.",
+        "topic": "script_length"
+      },
+      {
+        "id": "ux_-fcd62d1690",
+        "persona_id": "ux_delight",
+        "severity": "high",
+        "claim": "Demo path has six steps + optional apply-all \u2014 mid-talk Reset is a known footgun",
+        "evidence": "Do not click Reset again mid-talk",
+        "suggested_fix": "Put a sticky 'NO RESET' note on the demo machine; prefer CLI demo:reset only in preflight.",
+        "topic": "demo_friction"
+      },
+      {
+        "id": "ux_-5e50cb7763",
+        "persona_id": "ux_delight",
+        "severity": "low",
+        "claim": "Hold / Apply / Revert glossary is in header \u2014 say it once at flaky-date cluster",
+        "evidence": "iff. Say out loud: *Hold = add the guard. Apply = rewrite the smell. Revert = undo.* 5. Optional: **`npm run demo:apply-all`** \u2014 t",
+        "suggested_fix": "Practice the three-word glossary aloud once; don't re-explain on every prune.",
+        "topic": "glossary"
+      },
+      {
+        "id": "ux_-f343a9f987",
+        "persona_id": "ux_delight",
+        "severity": "nit",
+        "claim": "Attachment table includes webm \u2014 silent clip is reveal-friendly",
+        "evidence": "ax/bonsai/artifacts/demo-story.webm` | ~30 s motion clip ending 11 held / 1 biting (silent) |  **Optional:** `home-history.pn",
+        "suggested_fix": "Confirm autoplay/mute works in the reveal channel before Thursday.",
+        "topic": "attachments"
+      },
+      {
+        "id": "ope-bc1a341e91",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "Port 4317 must be free; Next.js 'N' badge means wrong serve mode",
+        "evidence": "e CLI). Open http://127.0.0.1:4317 \u2014 you should **not** see the Next.js dev \"N\" badge. 3. Second terminal: **`npm run demo:s",
+        "suggested_fix": "Preflight: lsof/curl 4317; abort if badge present; use serve --prod only.",
+        "topic": "ports"
+      },
+      {
+        "id": "ope-fb746d3cf1",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "Three green gates required: test, verify (28), adversarial (7)",
+        "evidence": "test` \u2014 green. 2. `npm run verify` \u2014 green (28 checks). 3. `npm run adversarial` (alias: `interrogate` if still present) \u2014",
+        "suggested_fix": "Run all three ~5 min before talk; paste exit codes into a sticky note.",
+        "topic": "preflight"
+      },
+      {
+        "id": "ope-7378a523f2",
+        "persona_id": "operator",
+        "severity": "medium",
+        "claim": "demo:story may need a single reload if tree does not live-refresh",
+        "evidence": "te). When it exits, reload once if the tree has not live-refreshed. 4. Open **http://127.0.0.1:4317/?cluster=flaky-date-p",
+        "suggested_fix": "Script the reload as step 3b so it doesn't look like a hang on stage.",
+        "topic": "failure_mode"
+      },
+      {
+        "id": "ope-90362a2759",
+        "persona_id": "operator",
+        "severity": "low",
+        "claim": "Deep-link cluster query is brittle if cluster id renames",
+        "evidence": "p://127.0.0.1:4317/?cluster=flaky-date-parse** \u2014 evidence, ranked encodings (type beats test beats lint beats prose), before/after dif",
+        "suggested_fix": "Pin cluster id in STATUS.md; if renamed, update reveal draft same commit.",
+        "topic": "runbook"
+      },
+      {
+        "id": "pro-659dd58f41",
+        "persona_id": "product",
+        "severity": "medium",
+        "claim": "Bookmark lineage (/correct, trust pyramid, Draft Day adjacency) is the ownership hook",
+        "evidence": "*Why it's yours** - Straight out of your bookmarks: poteto's `/correct` and bonsai post, the trust-layer pyramid (codebase \u2192 static analysis",
+        "suggested_fix": "Lead with 'why it's yours' before numbers so the reveal isn't a feature dump.",
+        "topic": "narrative"
+      },
+      {
+        "id": "pro-1eb6a4df99",
+        "persona_id": "product",
+        "severity": "low",
+        "claim": "Ask to move Origin draft \u2192 BoydVC/bonsai is a clear next CTA",
+        "evidence": "oved to a private **BoydVC/bonsai** repo like your other projects? Say the word after the reveal.  ---  ## Two-minute how-t",
+        "suggested_fix": "Keep CTA after honesty line; don't bury under attachments.",
+        "topic": "cta"
+      },
+      {
+        "id": "pro-24bc45c839",
+        "persona_id": "product",
+        "severity": "nit",
+        "claim": "Target send Thu Oct 29 ~5 PM ET sits before ~7:42 PM reset \u2014 good pacing",
+        "evidence": "sent)  Target send: Thu Oct 29, 2026 ~5 PM ET (before the ~7:42 PM ET weekly reset). Updated Mon Oct 26 ~9:35 PM ET for",
+        "suggested_fix": "No change; confirm calendar block still clear.",
+        "topic": "timing"
+      }
+    ],
+    "persona_count": 5,
+    "finding_count": 19
+  },
+  "chair": {
+    "chair": "Chair",
+    "verdict": "hold",
+    "risk_score": 55,
+    "adjusted_score": 53,
+    "summary": "Chair merges 19 findings from 5 personas \u2192 verdict=hold, must-fix=6, nice-to-haves=11, disagreements=1.",
+    "consensus_table": [
+      {
+        "topic": "send_gate",
+        "worst_severity": "blocker",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "Draft must never be sent from a burn/subagent session",
+        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "finding_ids": [
+          "sec-6b9c68abb0"
+        ]
+      },
+      {
+        "topic": "freshness",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "Pass-11 numbers may drift before Thursday send if Origin SHA moves",
+        "suggested_fix": "Bind the send checklist to STATUS.md SHA; if SHA \u2260 e41f0d6, regenerate numbers + attachments before send.",
+        "finding_ids": [
+          "ske-d1497f1409"
+        ]
+      },
+      {
+        "topic": "publish_boundary",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "Repo is still a private Origin draft \u2014 reveal must not imply public publish",
+        "suggested_fix": "Keep 'Where it lives' as Origin draft; require explicit OK before BoydVC/bonsai move.",
+        "finding_ids": [
+          "sec-eeeaee22e3"
+        ]
+      },
+      {
+        "topic": "demo_friction",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Demo path has six steps + optional apply-all \u2014 mid-talk Reset is a known footgun",
+        "suggested_fix": "Put a sticky 'NO RESET' note on the demo machine; prefer CLI demo:reset only in preflight.",
+        "finding_ids": [
+          "ux_-fcd62d1690"
+        ]
+      },
+      {
+        "topic": "ports",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Port 4317 must be free; Next.js 'N' badge means wrong serve mode",
+        "suggested_fix": "Preflight: lsof/curl 4317; abort if badge present; use serve --prod only.",
+        "finding_ids": [
+          "ope-bc1a341e91"
+        ]
+      },
+      {
+        "topic": "preflight",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Three green gates required: test, verify (28), adversarial (7)",
+        "suggested_fix": "Run all three ~5 min before talk; paste exit codes into a sticky note.",
+        "finding_ids": [
+          "ope-fb746d3cf1"
+        ]
+      },
+      {
+        "topic": "honesty",
+        "worst_severity": "medium",
+        "persona_count": 2,
+        "personas": [
+          "security",
+          "skeptic"
+        ],
+        "headline": "Honesty line admits catalog-vs-discovery gap but spoken script may oversell 'ingests a pile'",
+        "suggested_fix": "Keep the spoken line 'synthetic mistakes' and add one beat: 'twelve planted types, not live history discovery yet.'",
+        "finding_ids": [
+          "ske-327e7a5ade",
+          "sec-805780a9fe"
+        ]
+      },
+      {
+        "topic": "demo_narrative",
+        "worst_severity": "medium",
+        "persona_count": 2,
+        "personas": [
+          "skeptic",
+          "ux_delight"
+        ],
+        "headline": "Remaining '1 biting' after apply-all should be framed as honesty, not a broken demo",
+        "suggested_fix": "Agree the spoken beat with Skeptic before Thursday; one shared line.",
+        "finding_ids": [
+          "ske-17a2c18f98",
+          "ux_-9f4bbbe4e5"
+        ]
+      },
+      {
+        "topic": "script_length",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Spoken script targets 75\u201385s \u2014 good; two-minute how-to is operator, not spoken",
+        "suggested_fix": "Copy only the spoken block into notes; keep operator checklist off-screen during the talk.",
+        "finding_ids": [
+          "ux_-9cf2d41be9"
+        ]
+      },
+      {
+        "topic": "failure_mode",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "demo:story may need a single reload if tree does not live-refresh",
+        "suggested_fix": "Script the reload as step 3b so it doesn't look like a hang on stage.",
+        "finding_ids": [
+          "ope-7378a523f2"
+        ]
+      },
+      {
+        "topic": "narrative",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Bookmark lineage (/correct, trust pyramid, Draft Day adjacency) is the ownership hook",
+        "suggested_fix": "Lead with 'why it's yours' before numbers so the reveal isn't a feature dump.",
+        "finding_ids": [
+          "pro-659dd58f41"
+        ]
+      },
+      {
+        "topic": "verify",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "Blast-radius path guards mentioned but not demonstrated in the spoken path",
+        "suggested_fix": "Optional 10s aside: point at path-guard in verify or adversarial output if time.",
+        "finding_ids": [
+          "sec-da6fa18078"
+        ]
+      },
+      {
+        "topic": "glossary",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Hold / Apply / Revert glossary is in header \u2014 say it once at flaky-date cluster",
+        "suggested_fix": "Practice the three-word glossary aloud once; don't re-explain on every prune.",
+        "finding_ids": [
+          "ux_-5e50cb7763"
+        ]
+      },
+      {
+        "topic": "runbook",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Deep-link cluster query is brittle if cluster id renames",
+        "suggested_fix": "Pin cluster id in STATUS.md; if renamed, update reveal draft same commit.",
+        "finding_ids": [
+          "ope-90362a2759"
+        ]
+      },
+      {
+        "topic": "cta",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Ask to move Origin draft \u2192 BoydVC/bonsai is a clear next CTA",
+        "suggested_fix": "Keep CTA after honesty line; don't bury under attachments.",
+        "finding_ids": [
+          "pro-1eb6a4df99"
+        ]
+      },
+      {
+        "topic": "attachments",
+        "worst_severity": "nit",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Attachment table includes webm \u2014 silent clip is reveal-friendly",
+        "suggested_fix": "Confirm autoplay/mute works in the reveal channel before Thursday.",
+        "finding_ids": [
+          "ux_-f343a9f987"
+        ]
+      },
+      {
+        "topic": "timing",
+        "worst_severity": "nit",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Target send Thu Oct 29 ~5 PM ET sits before ~7:42 PM reset \u2014 good pacing",
+        "suggested_fix": "No change; confirm calendar block still clear.",
+        "finding_ids": [
+          "pro-24bc45c839"
+        ]
+      }
+    ],
+    "disagreements": [
+      {
+        "topic": "demo_narrative",
+        "severity_spread": [
+          "medium",
+          "low"
+        ],
+        "personas": [
+          "skeptic",
+          "ux_delight"
+        ],
+        "notes": "Personas disagree on urgency for 'demo_narrative': medium, low"
+      }
+    ],
+    "must_fix_before_ship": [
+      {
+        "id": "sec-6b9c68abb0",
+        "persona_id": "security",
+        "severity": "blocker",
+        "claim": "Draft must never be sent from a burn/subagent session",
+        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "evidence": "file is a draft. **Do not send from a burn/subagent session.**"
+      },
+      {
+        "id": "ope-bc1a341e91",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "Port 4317 must be free; Next.js 'N' badge means wrong serve mode",
+        "suggested_fix": "Preflight: lsof/curl 4317; abort if badge present; use serve --prod only.",
+        "evidence": "e CLI). Open http://127.0.0.1:4317 \u2014 you should **not** see the Next.js dev \"N\" badge. 3. Second terminal: **`npm run demo:s"
+      },
+      {
+        "id": "ope-fb746d3cf1",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "Three green gates required: test, verify (28), adversarial (7)",
+        "suggested_fix": "Run all three ~5 min before talk; paste exit codes into a sticky note.",
+        "evidence": "test` \u2014 green. 2. `npm run verify` \u2014 green (28 checks). 3. `npm run adversarial` (alias: `interrogate` if still present) \u2014"
+      },
+      {
+        "id": "sec-eeeaee22e3",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "Repo is still a private Origin draft \u2014 reveal must not imply public publish",
+        "suggested_fix": "Keep 'Where it lives' as Origin draft; require explicit OK before BoydVC/bonsai move.",
+        "evidence": "ursor Origin draft `boydvc/tmp-6e67f983fcd2585c` @ e41f0d6. Want it moved to a private **BoydVC/bonsai** repo like your other projects? S"
+      },
+      {
+        "id": "ske-d1497f1409",
+        "persona_id": "skeptic",
+        "severity": "high",
+        "claim": "Pass-11 numbers may drift before Thursday send if Origin SHA moves",
+        "suggested_fix": "Bind the send checklist to STATUS.md SHA; if SHA \u2260 e41f0d6, regenerate numbers + attachments before send.",
+        "evidence": "26 ~9:35 PM ET for pass 11 @ e41f0d6 (agent bc-15e97a35). Numbers and attachments below match `/workspace/tokenmax/bonsai/STAT"
+      },
+      {
+        "id": "ux_-fcd62d1690",
+        "persona_id": "ux_delight",
+        "severity": "high",
+        "claim": "Demo path has six steps + optional apply-all \u2014 mid-talk Reset is a known footgun",
+        "suggested_fix": "Put a sticky 'NO RESET' note on the demo machine; prefer CLI demo:reset only in preflight.",
+        "evidence": "Do not click Reset again mid-talk"
+      }
+    ],
+    "nice_to_haves": [
+      {
+        "id": "ope-7378a523f2",
+        "persona_id": "operator",
+        "severity": "medium",
+        "claim": "demo:story may need a single reload if tree does not live-refresh",
+        "suggested_fix": "Script the reload as step 3b so it doesn't look like a hang on stage.",
+        "evidence": "te). When it exits, reload once if the tree has not live-refreshed. 4. Open **http://127.0.0.1:4317/?cluster=flaky-date-p"
+      },
+      {
+        "id": "pro-659dd58f41",
+        "persona_id": "product",
+        "severity": "medium",
+        "claim": "Bookmark lineage (/correct, trust pyramid, Draft Day adjacency) is the ownership hook",
+        "suggested_fix": "Lead with 'why it's yours' before numbers so the reveal isn't a feature dump.",
+        "evidence": "*Why it's yours** - Straight out of your bookmarks: poteto's `/correct` and bonsai post, the trust-layer pyramid (codebase \u2192 static analysis"
+      },
+      {
+        "id": "sec-805780a9fe",
+        "persona_id": "security",
+        "severity": "medium",
+        "claim": "SYNTHETIC playground claim is strong \u2014 verify every attached screenshot still shows the badge",
+        "suggested_fix": "Attachment preflight: open each PNG/webm and confirm SYNTHETIC chrome before send.",
+        "evidence": "ents playground and every screen says SYNTHETIC.  **Numbers (pass 11 @ e41f0d6):** 60 synthetic mistakes \u2192 12 clusters; \"apply all\" ends"
+      },
+      {
+        "id": "ske-327e7a5ade",
+        "persona_id": "skeptic",
+        "severity": "medium",
+        "claim": "Honesty line admits catalog-vs-discovery gap but spoken script may oversell 'ingests a pile'",
+        "suggested_fix": "Keep the spoken line 'synthetic mistakes' and add one beat: 'twelve planted types, not live history discovery yet.'",
+        "evidence": "he demo corpus is a fixed catalog of 12 mistake types (the planted repeats). Some detectors may still be thinner than a full `/correct` loop (d"
+      },
+      {
+        "id": "ux_-9f4bbbe4e5",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Remaining '1 biting' after apply-all should be framed as honesty, not a broken demo",
+        "suggested_fix": "Agree the spoken beat with Skeptic before Thursday; one shared line.",
+        "evidence": "ng**). Point at the remaining biter as honesty, not failure. 6. Trust-but-verify line: `npm test`, `npm run verify`, `npm run adversaria"
+      },
+      {
+        "id": "ux_-9cf2d41be9",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Spoken script targets 75\u201385s \u2014 good; two-minute how-to is operator, not spoken",
+        "suggested_fix": "Copy only the spoken block into notes; keep operator checklist off-screen during the talk.",
+        "evidence": "t (copy into notes; ~75\u201385 seconds)  > Bonsai is the poteto idea from your bookmarks: stop micromanaging agents \u2014 encode the"
+      },
+      {
+        "id": "ope-90362a2759",
+        "persona_id": "operator",
+        "severity": "low",
+        "claim": "Deep-link cluster query is brittle if cluster id renames",
+        "suggested_fix": "Pin cluster id in STATUS.md; if renamed, update reveal draft same commit.",
+        "evidence": "p://127.0.0.1:4317/?cluster=flaky-date-parse** \u2014 evidence, ranked encodings (type beats test beats lint beats prose), before/after dif"
+      },
+      {
+        "id": "pro-1eb6a4df99",
+        "persona_id": "product",
+        "severity": "low",
+        "claim": "Ask to move Origin draft \u2192 BoydVC/bonsai is a clear next CTA",
+        "suggested_fix": "Keep CTA after honesty line; don't bury under attachments.",
+        "evidence": "oved to a private **BoydVC/bonsai** repo like your other projects? Say the word after the reveal.  ---  ## Two-minute how-t"
+      },
+      {
+        "id": "sec-da6fa18078",
+        "persona_id": "security",
+        "severity": "low",
+        "claim": "Blast-radius path guards mentioned but not demonstrated in the spoken path",
+        "suggested_fix": "Optional 10s aside: point at path-guard in verify or adversarial output if time.",
+        "evidence": "d pstack's verify / blast-radius ideas. - Built to sit next to Draft Day: Draft Day builds things; Bonsai keeps the next b"
+      },
+      {
+        "id": "ske-17a2c18f98",
+        "persona_id": "skeptic",
+        "severity": "low",
+        "claim": "'Apply-all ends 11 held / 1 biting' needs the remaining biter named in the talk",
+        "suggested_fix": "Name the remaining biter aloud (honesty, not failure) so the audience doesn't invent a bug.",
+        "evidence": "\"apply all\" ends **11 held / 1 biting**; **155** tests; **28**-check verify; **7** adversarial checks; lint clean. Hold / Apply"
+      },
+      {
+        "id": "ux_-5e50cb7763",
+        "persona_id": "ux_delight",
+        "severity": "low",
+        "claim": "Hold / Apply / Revert glossary is in header \u2014 say it once at flaky-date cluster",
+        "suggested_fix": "Practice the three-word glossary aloud once; don't re-explain on every prune.",
+        "evidence": "iff. Say out loud: *Hold = add the guard. Apply = rewrite the smell. Revert = undo.* 5. Optional: **`npm run demo:apply-all`** \u2014 t"
+      }
+    ],
+    "per_persona": [
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "color": "#f97316",
+        "finding_count": 3,
+        "blocker": 0,
+        "high": 1,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 9
+      },
+      {
+        "id": "security",
+        "name": "Security",
+        "color": "#ef4444",
+        "finding_count": 4,
+        "blocker": 1,
+        "high": 1,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 14
+      },
+      {
+        "id": "ux_delight",
+        "name": "UX Delight",
+        "color": "#a855f7",
+        "finding_count": 5,
+        "blocker": 0,
+        "high": 1,
+        "medium": 2,
+        "low": 1,
+        "nit": 1,
+        "risk_contribution": 13
+      },
+      {
+        "id": "operator",
+        "name": "Operator / On-call",
+        "color": "#22c55e",
+        "finding_count": 4,
+        "blocker": 0,
+        "high": 2,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 13
+      },
+      {
+        "id": "product",
+        "name": "Product Strategist",
+        "color": "#38bdf8",
+        "finding_count": 3,
+        "blocker": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 1,
+        "nit": 1,
+        "risk_contribution": 6
+      }
+    ],
+    "counts": {
+      "findings": 19,
+      "must_fix": 6,
+      "nice_to_haves": 11,
+      "disagreements": 1,
+      "topics": 17,
+      "blocker": 1,
+      "high": 5,
+      "medium": 6,
+      "low": 5,
+      "nit": 2
+    }
+  }
+}

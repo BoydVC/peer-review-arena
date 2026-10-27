@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peer Review Arena</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="mark">PR</div>
+      <div>
+        <h1>Peer Review Arena</h1>
+        <p class="tag">3–5 personas critique · chair merges · brief-007 pre-ops + brief-024 /correct CI + brief-027 Grok Council · local TokenMax burn</p>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main class="grid">
+    <section class="panel draft-panel">
+      <h2>Draft</h2>
+      <div class="seed-row" id="seeds"></div>
+      <label class="lbl" for="title">Title</label>
+      <input id="title" type="text" placeholder="Draft title" />
+      <label class="lbl" for="draft">Paste markdown / PR description / agent plan</label>
+      <textarea id="draft" rows="18" placeholder="Paste a draft…"></textarea>
+      <div class="actions">
+        <button id="run" class="primary">Run review</button>
+        <button id="load-bonsai" class="ghost">Load Bonsai reveal</button>
+        <button id="load-forge" class="ghost">Load Forge README</button>
+        <button id="load-preops" class="ghost">Load Brief-007 pre-ops</button>
+      </div>
+      <p class="hint">Reviews save under <code>out/review-*.json</code> + <code>.md</code>. Personas: Skeptic, Security, UX Delight, Operator, Product.</p>
+    </section>
+
+    <section class="panel chair-panel">
+      <h2>Chair</h2>
+      <div id="verdict" class="verdict empty">Run a review to see the consensus scorecard.</div>
+      <div id="must" class="block"></div>
+      <div id="consensus" class="block"></div>
+      <div id="disagreements" class="block"></div>
+    </section>
+
+    <section class="panel personas-panel">
+      <h2>Personas</h2>
+      <div id="personas" class="persona-cards"></div>
+    </section>
+
+    <section class="panel transcript-panel">
+      <h2>Transcript</h2>
+      <div id="saved" class="saved"></div>
+      <pre id="md" class="md empty">Readable markdown lands here.</pre>
+    </section>
+
+    <section class="panel law-panel-wrap" id="panel-brief024">
+      <h2>Brief-024 law · /correct CI</h2>
+      <p class="hint">Loading portable /correct CI law…</p>
+    </section>
+
+    <section class="panel law-panel-wrap" id="panel-brief027">
+      <h2>Brief-027 law · Grok Council</h2>
+      <p class="hint">Loading portable Grok Council law…</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>http://127.0.0.1:4333</span>
+    <span>· Grok Bot weekly · no Cursor cloud agents</span>
+  </footer>
+  <div id="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>

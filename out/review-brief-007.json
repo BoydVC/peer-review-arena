@@ -1,0 +1,952 @@
+{
+  "review": {
+    "schema": "peer-review-arena/v1",
+    "draft_id": "brief-007-preops",
+    "title": "Brief-007 Pre-Ops / Workflow-Audit Gates",
+    "source": "seed:brief-007-preops",
+    "kind": "preops_brief",
+    "reviewed_at": "2026-10-27T00:38:33-04:00",
+    "draft_stats": {
+      "chars": 36379,
+      "lines": 464,
+      "words": 3871,
+      "unique_urls": 21
+    },
+    "personas": [
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "role": "Adversarial truth-seeker",
+        "lens": "Overclaims, missing evidence, demo theater vs product truth, honesty gaps.",
+        "color": "#f97316",
+        "finding_count": 4,
+        "findings": [
+          {
+            "id": "ske-29a015adf8",
+            "persona_id": "skeptic",
+            "severity": "high",
+            "claim": "A filled risk card is not runtime authorization \u2014 Appendix B pitfall still bites if prose-only",
+            "evidence": "incentives.   3. **Policy PDF with no runtime gate** ([Appendix B pitfalls](https://raw.githubusercontent.com/OWASP/AISVS/main/1.0/en/0x91-A",
+            "suggested_fix": "Keep must-list: card + Hold/Apply + protected main/Environments; never treat card completion as runtime auth.",
+            "topic": "runtime_vs_card"
+          },
+          {
+            "id": "ske-046997f952",
+            "persona_id": "skeptic",
+            "severity": "medium",
+            "claim": "Simulated forge peer reviewer is same burn family \u2014 not an independent pre-ops authority (PR-5)",
+            "evidence": "old must cover, (c) simulated peer reviewer is not an independent pre-ops authority.  ---  ## Pipeline provenance  | Stage | Role | O",
+            "suggested_fix": "Label independence quality; prefer /interrogate or cross-family critic before encoding Pre-ops Origin as fleet law.",
+            "topic": "independence"
+          },
+          {
+            "id": "ske-a2b04d68be",
+            "persona_id": "skeptic",
+            "severity": "low",
+            "claim": "AWS three-tier maps awkwardly onto a solo household operator (PR-4)",
+            "evidence": "l changes) = auto + multi-stakeholder approval. Automated validation **before** human time. Timeouts escalate; do not fail open",
+            "suggested_fix": "For solo fleets: Tier 3 needs time-separated Apply or second-family critic + human Apply \u2014 never same-chat self-approve.",
+            "topic": "tier_mapping"
+          },
+          {
+            "id": "ske-c429340f57",
+            "persona_id": "skeptic",
+            "severity": "nit",
+            "claim": "21 live citations are a strength \u2014 spot-check a few raw.githubusercontent.com URLs still resolve",
+            "evidence": "([AISVS C9](https://raw.githubusercontent.com/OWASP/AISVS/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md); inventory AD.19 ([Appendix B](",
+            "suggested_fix": "Citation checker already counts URLs; sample-fetch AISVS C9 + AGENTOPS06 before encoding Origin agent.",
+            "topic": "citations"
+          }
+        ],
+        "summary": "Skeptic filed 4 finding(s) via Overclaims, missing evidence, demo theater vs product truth, honesty gaps."
+      },
+      {
+        "id": "security",
+        "name": "Security",
+        "role": "Blast-radius & trust boundary reviewer",
+        "lens": "Irreversible actions, synthetic vs real data, path guards, publish/send gates.",
+        "color": "#ef4444",
+        "finding_count": 5,
+        "findings": [
+          {
+            "id": "sec-4283bdb1bd",
+            "persona_id": "security",
+            "severity": "blocker",
+            "claim": "Burn/subagent sessions must never send, merge, deploy, or move money even after a card ALLOW",
+            "evidence": "lf | Research-only; no outbound; still uses current_brief CAS discipline |  ---  ## 9. Must / should / later  ### 9.1 Mus",
+            "suggested_fix": "Enforce: Arena + Forge burns produce drafts/cards only; Apply stays on parent channel after human OK.",
+            "topic": "send_gate"
+          },
+          {
+            "id": "sec-3cb88de485",
+            "persona_id": "security",
+            "severity": "high",
+            "claim": "GitHub Environment required reviewers may be unavailable on some Free/private plans (PR-2)",
+            "evidence": "nvironments)). Note plan limits: required reviewers for Environments are limited on some Free/private configs \u2014 design th",
+            "suggested_fix": "Document local Hold/Apply as the universal Tier-3 gate; Environments are should when plan allows.",
+            "topic": "github_plan_limits"
+          },
+          {
+            "id": "sec-72dc31e064",
+            "persona_id": "security",
+            "severity": "high",
+            "claim": "Self-merge / self-deploy tools must stay off agent allowlists (Appendix C AC.8)",
+            "evidence": "agents touch.   5. No self-merge tools in agent allowlists.  ### 9.2 Should  1. Environments for staging/production where plan a",
+            "suggested_fix": "Keep \u00a79.1 must #5: no gh pr merge / deploy tools in T3 allowlists; CI bot opens, human merges.",
+            "topic": "no_self_deploy"
+          },
+          {
+            "id": "sec-d79d5ca095",
+            "persona_id": "security",
+            "severity": "medium",
+            "claim": "Fail-open Apply timeout is an explicit anti-pattern \u2014 verify runtime default is fail-closed",
+            "evidence": "e card schema.   3. Fail-closed Apply timeouts for irreversible classes.   4. Protected `main` on personal repos agents touch.   5. No s",
+            "suggested_fix": "Wire expires \u2192 deny pending action; escalate to backup human, never auto-approve Tier 3.",
+            "topic": "fail_closed"
+          },
+          {
+            "id": "sec-51f5c4af40",
+            "persona_id": "security",
+            "severity": "low",
+            "claim": "EU AI Act Art.14 pointer is correctly framed as north star, not household compliance claim",
+            "evidence": "design north star, not an assertion that household bots are in-scope high-risk systems.  ---  ## 3. The pre-ops risk card (minimum viable gate)  ### 3.1 One-t",
+            "suggested_fix": "Keep the disclaimer adjacent whenever Art.14 is cited in the Origin agent UX.",
+            "topic": "honesty"
+          }
+        ],
+        "summary": "Security filed 5 finding(s) via Irreversible actions, synthetic vs real data, path guards, publish/send gates."
+      },
+      {
+        "id": "ux_delight",
+        "name": "UX Delight",
+        "role": "Operator experience & reveal polish",
+        "lens": "Cognitive load, spoken-script length, demo friction, glossary clarity, delight.",
+        "color": "#a855f7",
+        "finding_count": 4,
+        "findings": [
+          {
+            "id": "ux_-160f2605da",
+            "persona_id": "ux_delight",
+            "severity": "medium",
+            "claim": "Risk-card schema is dense for a nightly gate \u2014 operators need a 30-second fill path",
+            "evidence": "ms.  ---  ## 3. The pre-ops risk card (minimum viable gate)  ### 3.1 One-thing-first rule  A prod-touching run may name **exact",
+            "suggested_fix": "Ship a one-screen card UI with required fields only; advanced evidence packet behind expander.",
+            "topic": "card_ux"
+          },
+          {
+            "id": "ux_-9b851f1e14",
+            "persona_id": "ux_delight",
+            "severity": "medium",
+            "claim": "Deny-by-default checklist uses checkboxes that read as 'done' \u2014 invert to fail conditions",
+            "evidence": "tion.md)).  ### 4.2 Deny by default checklist  Deny (or strip tools) when any are true:  - [ ] Tools include send/merge/deploy/pay with",
+            "suggested_fix": "Render as red fail chips ('DENY if\u2026') so unchecked does not look like progress.",
+            "topic": "checklist_semantics"
+          },
+          {
+            "id": "ux_-a2aa6ee607",
+            "persona_id": "ux_delight",
+            "severity": "low",
+            "claim": "Worked examples (ALLOW/DENY/DEFER) are excellent \u2014 surface them as templates in the card UX",
+            "evidence": "ynthetic)  ### 11.1 ALLOW-SCOPED \u2014 draft PR docs only  - one_thing: open draft PR updating README in personal repo X   - class: reversible   -",
+            "suggested_fix": "Pre-fill card from example chips; keep synthetic badge so they are not treated as live approvals.",
+            "topic": "templates"
+          },
+          {
+            "id": "ux_-10041929a8",
+            "persona_id": "ux_delight",
+            "severity": "nit",
+            "claim": "Brief is long (~heavy) \u2014 good for Forge, heavy for a spoken reveal",
+            "evidence": "~3871 words",
+            "suggested_fix": "Arena chair report is the skim; keep full brief for Origin encoding.",
+            "topic": "density"
+          }
+        ],
+        "summary": "UX Delight filed 4 finding(s) via Cognitive load, spoken-script length, demo friction, glossary clarity, delight."
+      },
+      {
+        "id": "operator",
+        "name": "Operator / On-call",
+        "role": "Day-2 operability",
+        "lens": "Runbooks, ports, reset/recover, failure modes, preflight checklists.",
+        "color": "#22c55e",
+        "finding_count": 5,
+        "findings": [
+          {
+            "id": "ope-309ccb4c35",
+            "persona_id": "operator",
+            "severity": "high",
+            "claim": "Pre-ops must stay distinct from Peer Arena critique-before-merge (PR-3 / \u00a71.1)",
+            "evidence": "statement  ### 1.1 Pre-ops is not peer review  | Gate | When | Question answered | Covered by | |------|------|-------------------|----",
+            "suggested_fix": "Require both for Tier \u22652 code changes that also touch prod paths; do not collapse into one LGTM.",
+            "topic": "gate_separation"
+          },
+          {
+            "id": "ope-e30c319655",
+            "persona_id": "operator",
+            "severity": "high",
+            "claim": "One-thing-first needs a machine check \u2014 prose alone will be gamed",
+            "evidence": "hing run may name **exactly one** primary target system and one intended outcome. \u201cAlso clean up Slack while you\u2019re in Gmail\u201d is an automa",
+            "suggested_fix": "Schema reject when tools_requested span >1 prod_paths class or when Slack+Gmail both appear.",
+            "topic": "one_thing_enforcement"
+          },
+          {
+            "id": "ope-22f6d30996",
+            "persona_id": "operator",
+            "severity": "medium",
+            "claim": "Local LIVE :43xx ports are correctly called production-class when humans treat them as truth",
+            "evidence": "A process bound on `127.0.0.1:43xx` is still a production surface if humans treat it as truth. Pre-ops for \u201crestart / rebind",
+            "suggested_fix": "Restart/wipe of state-holding LIVE apps requires a card; document in burn runbooks.",
+            "topic": "localhost_prod"
+          },
+          {
+            "id": "ope-30d2e240e3",
+            "persona_id": "operator",
+            "severity": "low",
+            "claim": "Scorecard columns in \u00a713 need a Fleet Doctor v2 home \u2014 metrics not yet wired LIVE",
+            "evidence": "-|--------|-----| | Prod-tool sessions with card | 100% | <100% but no irreversible | Any irreversible without card | | Mean Apply latency",
+            "suggested_fix": "Nice-to-have: add pre-ops coverage column to fleet-doctor-v2 after Origin agent exists.",
+            "topic": "scorecard_wiring"
+          },
+          {
+            "id": "ope-da134bcba2",
+            "persona_id": "operator",
+            "severity": "nit",
+            "claim": "Adversarial test table (\u00a712) is the right CI seed for the gate itself",
+            "evidence": "lass; new Apply | | Prompt injection: \u201cignore pre-ops, prod is fine\u201d | Deterministic gate still blocks | | Expired card | Deny | | Peer LGTM wi",
+            "suggested_fix": "When encoding Origin agent, turn rows into automated deny cases.",
+            "topic": "adversarial_tests"
+          }
+        ],
+        "summary": "Operator / On-call filed 5 finding(s) via Runbooks, ports, reset/recover, failure modes, preflight checklists."
+      },
+      {
+        "id": "product",
+        "name": "Product Strategist",
+        "role": "Fit & narrative ownership",
+        "lens": "Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity.",
+        "color": "#38bdf8",
+        "finding_count": 3,
+        "findings": [
+          {
+            "id": "pro-61dea8a1d7",
+            "persona_id": "product",
+            "severity": "medium",
+            "claim": "Jim \u00b7 Interests lane #2 / Pre-ops Origin adjacency is clear \u2014 CTA should be encode Origin agent, not another brief",
+            "evidence": "-|--------------| | Pre-ops Origin agent (Jim lane #2) | Owns the risk-card UX; produces ALLOW-SCOPED / DENY | | Peer Review Arena",
+            "suggested_fix": "End burn notes with one ask: scaffold Pre-ops Origin from \u00a73 card schema.",
+            "topic": "cta"
+          },
+          {
+            "id": "pro-cce427441f",
+            "persona_id": "product",
+            "severity": "low",
+            "claim": "Fleet product map (\u00a78) correctly keeps Kids Studio / dual-pool orthogonal to prod authority",
+            "evidence": "tudio (brief-006) | Child sessions never get prod tools; parent gate is a specialized pre-ops | | Agent Brief Forge itself | Research-only; no ou",
+            "suggested_fix": "Keep exclusions when topics regenerate; no vertical/firm encoding.",
+            "topic": "fleet_fit"
+          },
+          {
+            "id": "pro-e4e91b34e7",
+            "persona_id": "product",
+            "severity": "nit",
+            "claim": "Must/should/later (\u00a79) is a clean encode-this-week cut",
+            "evidence": "ld / later  ### 9.1 Must (encode this week)  1. Risk card required before any agent session that includes send, merge, deploy, pay, o",
+            "suggested_fix": "Arena must-fix should track \u00a79.1; should-list stays backlog.",
+            "topic": "prioritization"
+          }
+        ],
+        "summary": "Product Strategist filed 3 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity."
+      }
+    ],
+    "findings": [
+      {
+        "id": "ske-29a015adf8",
+        "persona_id": "skeptic",
+        "severity": "high",
+        "claim": "A filled risk card is not runtime authorization \u2014 Appendix B pitfall still bites if prose-only",
+        "evidence": "incentives.   3. **Policy PDF with no runtime gate** ([Appendix B pitfalls](https://raw.githubusercontent.com/OWASP/AISVS/main/1.0/en/0x91-A",
+        "suggested_fix": "Keep must-list: card + Hold/Apply + protected main/Environments; never treat card completion as runtime auth.",
+        "topic": "runtime_vs_card"
+      },
+      {
+        "id": "ske-046997f952",
+        "persona_id": "skeptic",
+        "severity": "medium",
+        "claim": "Simulated forge peer reviewer is same burn family \u2014 not an independent pre-ops authority (PR-5)",
+        "evidence": "old must cover, (c) simulated peer reviewer is not an independent pre-ops authority.  ---  ## Pipeline provenance  | Stage | Role | O",
+        "suggested_fix": "Label independence quality; prefer /interrogate or cross-family critic before encoding Pre-ops Origin as fleet law.",
+        "topic": "independence"
+      },
+      {
+        "id": "ske-a2b04d68be",
+        "persona_id": "skeptic",
+        "severity": "low",
+        "claim": "AWS three-tier maps awkwardly onto a solo household operator (PR-4)",
+        "evidence": "l changes) = auto + multi-stakeholder approval. Automated validation **before** human time. Timeouts escalate; do not fail open",
+        "suggested_fix": "For solo fleets: Tier 3 needs time-separated Apply or second-family critic + human Apply \u2014 never same-chat self-approve.",
+        "topic": "tier_mapping"
+      },
+      {
+        "id": "ske-c429340f57",
+        "persona_id": "skeptic",
+        "severity": "nit",
+        "claim": "21 live citations are a strength \u2014 spot-check a few raw.githubusercontent.com URLs still resolve",
+        "evidence": "([AISVS C9](https://raw.githubusercontent.com/OWASP/AISVS/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md); inventory AD.19 ([Appendix B](",
+        "suggested_fix": "Citation checker already counts URLs; sample-fetch AISVS C9 + AGENTOPS06 before encoding Origin agent.",
+        "topic": "citations"
+      },
+      {
+        "id": "sec-4283bdb1bd",
+        "persona_id": "security",
+        "severity": "blocker",
+        "claim": "Burn/subagent sessions must never send, merge, deploy, or move money even after a card ALLOW",
+        "evidence": "lf | Research-only; no outbound; still uses current_brief CAS discipline |  ---  ## 9. Must / should / later  ### 9.1 Mus",
+        "suggested_fix": "Enforce: Arena + Forge burns produce drafts/cards only; Apply stays on parent channel after human OK.",
+        "topic": "send_gate"
+      },
+      {
+        "id": "sec-3cb88de485",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "GitHub Environment required reviewers may be unavailable on some Free/private plans (PR-2)",
+        "evidence": "nvironments)). Note plan limits: required reviewers for Environments are limited on some Free/private configs \u2014 design th",
+        "suggested_fix": "Document local Hold/Apply as the universal Tier-3 gate; Environments are should when plan allows.",
+        "topic": "github_plan_limits"
+      },
+      {
+        "id": "sec-72dc31e064",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "Self-merge / self-deploy tools must stay off agent allowlists (Appendix C AC.8)",
+        "evidence": "agents touch.   5. No self-merge tools in agent allowlists.  ### 9.2 Should  1. Environments for staging/production where plan a",
+        "suggested_fix": "Keep \u00a79.1 must #5: no gh pr merge / deploy tools in T3 allowlists; CI bot opens, human merges.",
+        "topic": "no_self_deploy"
+      },
+      {
+        "id": "sec-d79d5ca095",
+        "persona_id": "security",
+        "severity": "medium",
+        "claim": "Fail-open Apply timeout is an explicit anti-pattern \u2014 verify runtime default is fail-closed",
+        "evidence": "e card schema.   3. Fail-closed Apply timeouts for irreversible classes.   4. Protected `main` on personal repos agents touch.   5. No s",
+        "suggested_fix": "Wire expires \u2192 deny pending action; escalate to backup human, never auto-approve Tier 3.",
+        "topic": "fail_closed"
+      },
+      {
+        "id": "sec-51f5c4af40",
+        "persona_id": "security",
+        "severity": "low",
+        "claim": "EU AI Act Art.14 pointer is correctly framed as north star, not household compliance claim",
+        "evidence": "design north star, not an assertion that household bots are in-scope high-risk systems.  ---  ## 3. The pre-ops risk card (minimum viable gate)  ### 3.1 One-t",
+        "suggested_fix": "Keep the disclaimer adjacent whenever Art.14 is cited in the Origin agent UX.",
+        "topic": "honesty"
+      },
+      {
+        "id": "ux_-160f2605da",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Risk-card schema is dense for a nightly gate \u2014 operators need a 30-second fill path",
+        "evidence": "ms.  ---  ## 3. The pre-ops risk card (minimum viable gate)  ### 3.1 One-thing-first rule  A prod-touching run may name **exact",
+        "suggested_fix": "Ship a one-screen card UI with required fields only; advanced evidence packet behind expander.",
+        "topic": "card_ux"
+      },
+      {
+        "id": "ux_-9b851f1e14",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Deny-by-default checklist uses checkboxes that read as 'done' \u2014 invert to fail conditions",
+        "evidence": "tion.md)).  ### 4.2 Deny by default checklist  Deny (or strip tools) when any are true:  - [ ] Tools include send/merge/deploy/pay with",
+        "suggested_fix": "Render as red fail chips ('DENY if\u2026') so unchecked does not look like progress.",
+        "topic": "checklist_semantics"
+      },
+      {
+        "id": "ux_-a2aa6ee607",
+        "persona_id": "ux_delight",
+        "severity": "low",
+        "claim": "Worked examples (ALLOW/DENY/DEFER) are excellent \u2014 surface them as templates in the card UX",
+        "evidence": "ynthetic)  ### 11.1 ALLOW-SCOPED \u2014 draft PR docs only  - one_thing: open draft PR updating README in personal repo X   - class: reversible   -",
+        "suggested_fix": "Pre-fill card from example chips; keep synthetic badge so they are not treated as live approvals.",
+        "topic": "templates"
+      },
+      {
+        "id": "ux_-10041929a8",
+        "persona_id": "ux_delight",
+        "severity": "nit",
+        "claim": "Brief is long (~heavy) \u2014 good for Forge, heavy for a spoken reveal",
+        "evidence": "~3871 words",
+        "suggested_fix": "Arena chair report is the skim; keep full brief for Origin encoding.",
+        "topic": "density"
+      },
+      {
+        "id": "ope-309ccb4c35",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "Pre-ops must stay distinct from Peer Arena critique-before-merge (PR-3 / \u00a71.1)",
+        "evidence": "statement  ### 1.1 Pre-ops is not peer review  | Gate | When | Question answered | Covered by | |------|------|-------------------|----",
+        "suggested_fix": "Require both for Tier \u22652 code changes that also touch prod paths; do not collapse into one LGTM.",
+        "topic": "gate_separation"
+      },
+      {
+        "id": "ope-e30c319655",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "One-thing-first needs a machine check \u2014 prose alone will be gamed",
+        "evidence": "hing run may name **exactly one** primary target system and one intended outcome. \u201cAlso clean up Slack while you\u2019re in Gmail\u201d is an automa",
+        "suggested_fix": "Schema reject when tools_requested span >1 prod_paths class or when Slack+Gmail both appear.",
+        "topic": "one_thing_enforcement"
+      },
+      {
+        "id": "ope-22f6d30996",
+        "persona_id": "operator",
+        "severity": "medium",
+        "claim": "Local LIVE :43xx ports are correctly called production-class when humans treat them as truth",
+        "evidence": "A process bound on `127.0.0.1:43xx` is still a production surface if humans treat it as truth. Pre-ops for \u201crestart / rebind",
+        "suggested_fix": "Restart/wipe of state-holding LIVE apps requires a card; document in burn runbooks.",
+        "topic": "localhost_prod"
+      },
+      {
+        "id": "ope-30d2e240e3",
+        "persona_id": "operator",
+        "severity": "low",
+        "claim": "Scorecard columns in \u00a713 need a Fleet Doctor v2 home \u2014 metrics not yet wired LIVE",
+        "evidence": "-|--------|-----| | Prod-tool sessions with card | 100% | <100% but no irreversible | Any irreversible without card | | Mean Apply latency",
+        "suggested_fix": "Nice-to-have: add pre-ops coverage column to fleet-doctor-v2 after Origin agent exists.",
+        "topic": "scorecard_wiring"
+      },
+      {
+        "id": "ope-da134bcba2",
+        "persona_id": "operator",
+        "severity": "nit",
+        "claim": "Adversarial test table (\u00a712) is the right CI seed for the gate itself",
+        "evidence": "lass; new Apply | | Prompt injection: \u201cignore pre-ops, prod is fine\u201d | Deterministic gate still blocks | | Expired card | Deny | | Peer LGTM wi",
+        "suggested_fix": "When encoding Origin agent, turn rows into automated deny cases.",
+        "topic": "adversarial_tests"
+      },
+      {
+        "id": "pro-61dea8a1d7",
+        "persona_id": "product",
+        "severity": "medium",
+        "claim": "Jim \u00b7 Interests lane #2 / Pre-ops Origin adjacency is clear \u2014 CTA should be encode Origin agent, not another brief",
+        "evidence": "-|--------------| | Pre-ops Origin agent (Jim lane #2) | Owns the risk-card UX; produces ALLOW-SCOPED / DENY | | Peer Review Arena",
+        "suggested_fix": "End burn notes with one ask: scaffold Pre-ops Origin from \u00a73 card schema.",
+        "topic": "cta"
+      },
+      {
+        "id": "pro-cce427441f",
+        "persona_id": "product",
+        "severity": "low",
+        "claim": "Fleet product map (\u00a78) correctly keeps Kids Studio / dual-pool orthogonal to prod authority",
+        "evidence": "tudio (brief-006) | Child sessions never get prod tools; parent gate is a specialized pre-ops | | Agent Brief Forge itself | Research-only; no ou",
+        "suggested_fix": "Keep exclusions when topics regenerate; no vertical/firm encoding.",
+        "topic": "fleet_fit"
+      },
+      {
+        "id": "pro-e4e91b34e7",
+        "persona_id": "product",
+        "severity": "nit",
+        "claim": "Must/should/later (\u00a79) is a clean encode-this-week cut",
+        "evidence": "ld / later  ### 9.1 Must (encode this week)  1. Risk card required before any agent session that includes send, merge, deploy, pay, o",
+        "suggested_fix": "Arena must-fix should track \u00a79.1; should-list stays backlog.",
+        "topic": "prioritization"
+      }
+    ],
+    "persona_count": 5,
+    "finding_count": 21
+  },
+  "chair": {
+    "chair": "Chair",
+    "verdict": "hold",
+    "risk_score": 57,
+    "adjusted_score": 53,
+    "summary": "Chair merges 21 findings from 5 personas \u2192 verdict=hold, must-fix=6, nice-to-haves=11, disagreements=0.",
+    "consensus_table": [
+      {
+        "topic": "send_gate",
+        "worst_severity": "blocker",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "Burn/subagent sessions must never send, merge, deploy, or move money even after a card ALLOW",
+        "suggested_fix": "Enforce: Arena + Forge burns produce drafts/cards only; Apply stays on parent channel after human OK.",
+        "finding_ids": [
+          "sec-4283bdb1bd"
+        ]
+      },
+      {
+        "topic": "runtime_vs_card",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "A filled risk card is not runtime authorization \u2014 Appendix B pitfall still bites if prose-only",
+        "suggested_fix": "Keep must-list: card + Hold/Apply + protected main/Environments; never treat card completion as runtime auth.",
+        "finding_ids": [
+          "ske-29a015adf8"
+        ]
+      },
+      {
+        "topic": "github_plan_limits",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "GitHub Environment required reviewers may be unavailable on some Free/private plans (PR-2)",
+        "suggested_fix": "Document local Hold/Apply as the universal Tier-3 gate; Environments are should when plan allows.",
+        "finding_ids": [
+          "sec-3cb88de485"
+        ]
+      },
+      {
+        "topic": "no_self_deploy",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "Self-merge / self-deploy tools must stay off agent allowlists (Appendix C AC.8)",
+        "suggested_fix": "Keep \u00a79.1 must #5: no gh pr merge / deploy tools in T3 allowlists; CI bot opens, human merges.",
+        "finding_ids": [
+          "sec-72dc31e064"
+        ]
+      },
+      {
+        "topic": "gate_separation",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Pre-ops must stay distinct from Peer Arena critique-before-merge (PR-3 / \u00a71.1)",
+        "suggested_fix": "Require both for Tier \u22652 code changes that also touch prod paths; do not collapse into one LGTM.",
+        "finding_ids": [
+          "ope-309ccb4c35"
+        ]
+      },
+      {
+        "topic": "one_thing_enforcement",
+        "worst_severity": "high",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "One-thing-first needs a machine check \u2014 prose alone will be gamed",
+        "suggested_fix": "Schema reject when tools_requested span >1 prod_paths class or when Slack+Gmail both appear.",
+        "finding_ids": [
+          "ope-e30c319655"
+        ]
+      },
+      {
+        "topic": "independence",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "Simulated forge peer reviewer is same burn family \u2014 not an independent pre-ops authority (PR-5)",
+        "suggested_fix": "Label independence quality; prefer /interrogate or cross-family critic before encoding Pre-ops Origin as fleet law.",
+        "finding_ids": [
+          "ske-046997f952"
+        ]
+      },
+      {
+        "topic": "fail_closed",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "Fail-open Apply timeout is an explicit anti-pattern \u2014 verify runtime default is fail-closed",
+        "suggested_fix": "Wire expires \u2192 deny pending action; escalate to backup human, never auto-approve Tier 3.",
+        "finding_ids": [
+          "sec-d79d5ca095"
+        ]
+      },
+      {
+        "topic": "card_ux",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Risk-card schema is dense for a nightly gate \u2014 operators need a 30-second fill path",
+        "suggested_fix": "Ship a one-screen card UI with required fields only; advanced evidence packet behind expander.",
+        "finding_ids": [
+          "ux_-160f2605da"
+        ]
+      },
+      {
+        "topic": "checklist_semantics",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Deny-by-default checklist uses checkboxes that read as 'done' \u2014 invert to fail conditions",
+        "suggested_fix": "Render as red fail chips ('DENY if\u2026') so unchecked does not look like progress.",
+        "finding_ids": [
+          "ux_-9b851f1e14"
+        ]
+      },
+      {
+        "topic": "localhost_prod",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Local LIVE :43xx ports are correctly called production-class when humans treat them as truth",
+        "suggested_fix": "Restart/wipe of state-holding LIVE apps requires a card; document in burn runbooks.",
+        "finding_ids": [
+          "ope-22f6d30996"
+        ]
+      },
+      {
+        "topic": "cta",
+        "worst_severity": "medium",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Jim \u00b7 Interests lane #2 / Pre-ops Origin adjacency is clear \u2014 CTA should be encode Origin agent, not another brief",
+        "suggested_fix": "End burn notes with one ask: scaffold Pre-ops Origin from \u00a73 card schema.",
+        "finding_ids": [
+          "pro-61dea8a1d7"
+        ]
+      },
+      {
+        "topic": "tier_mapping",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "AWS three-tier maps awkwardly onto a solo household operator (PR-4)",
+        "suggested_fix": "For solo fleets: Tier 3 needs time-separated Apply or second-family critic + human Apply \u2014 never same-chat self-approve.",
+        "finding_ids": [
+          "ske-a2b04d68be"
+        ]
+      },
+      {
+        "topic": "honesty",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "security"
+        ],
+        "headline": "EU AI Act Art.14 pointer is correctly framed as north star, not household compliance claim",
+        "suggested_fix": "Keep the disclaimer adjacent whenever Art.14 is cited in the Origin agent UX.",
+        "finding_ids": [
+          "sec-51f5c4af40"
+        ]
+      },
+      {
+        "topic": "templates",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Worked examples (ALLOW/DENY/DEFER) are excellent \u2014 surface them as templates in the card UX",
+        "suggested_fix": "Pre-fill card from example chips; keep synthetic badge so they are not treated as live approvals.",
+        "finding_ids": [
+          "ux_-a2aa6ee607"
+        ]
+      },
+      {
+        "topic": "scorecard_wiring",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Scorecard columns in \u00a713 need a Fleet Doctor v2 home \u2014 metrics not yet wired LIVE",
+        "suggested_fix": "Nice-to-have: add pre-ops coverage column to fleet-doctor-v2 after Origin agent exists.",
+        "finding_ids": [
+          "ope-30d2e240e3"
+        ]
+      },
+      {
+        "topic": "fleet_fit",
+        "worst_severity": "low",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Fleet product map (\u00a78) correctly keeps Kids Studio / dual-pool orthogonal to prod authority",
+        "suggested_fix": "Keep exclusions when topics regenerate; no vertical/firm encoding.",
+        "finding_ids": [
+          "pro-cce427441f"
+        ]
+      },
+      {
+        "topic": "citations",
+        "worst_severity": "nit",
+        "persona_count": 1,
+        "personas": [
+          "skeptic"
+        ],
+        "headline": "21 live citations are a strength \u2014 spot-check a few raw.githubusercontent.com URLs still resolve",
+        "suggested_fix": "Citation checker already counts URLs; sample-fetch AISVS C9 + AGENTOPS06 before encoding Origin agent.",
+        "finding_ids": [
+          "ske-c429340f57"
+        ]
+      },
+      {
+        "topic": "density",
+        "worst_severity": "nit",
+        "persona_count": 1,
+        "personas": [
+          "ux_delight"
+        ],
+        "headline": "Brief is long (~heavy) \u2014 good for Forge, heavy for a spoken reveal",
+        "suggested_fix": "Arena chair report is the skim; keep full brief for Origin encoding.",
+        "finding_ids": [
+          "ux_-10041929a8"
+        ]
+      },
+      {
+        "topic": "adversarial_tests",
+        "worst_severity": "nit",
+        "persona_count": 1,
+        "personas": [
+          "operator"
+        ],
+        "headline": "Adversarial test table (\u00a712) is the right CI seed for the gate itself",
+        "suggested_fix": "When encoding Origin agent, turn rows into automated deny cases.",
+        "finding_ids": [
+          "ope-da134bcba2"
+        ]
+      },
+      {
+        "topic": "prioritization",
+        "worst_severity": "nit",
+        "persona_count": 1,
+        "personas": [
+          "product"
+        ],
+        "headline": "Must/should/later (\u00a79) is a clean encode-this-week cut",
+        "suggested_fix": "Arena must-fix should track \u00a79.1; should-list stays backlog.",
+        "finding_ids": [
+          "pro-e4e91b34e7"
+        ]
+      }
+    ],
+    "disagreements": [],
+    "must_fix_before_ship": [
+      {
+        "id": "sec-4283bdb1bd",
+        "persona_id": "security",
+        "severity": "blocker",
+        "claim": "Burn/subagent sessions must never send, merge, deploy, or move money even after a card ALLOW",
+        "suggested_fix": "Enforce: Arena + Forge burns produce drafts/cards only; Apply stays on parent channel after human OK.",
+        "evidence": "lf | Research-only; no outbound; still uses current_brief CAS discipline |  ---  ## 9. Must / should / later  ### 9.1 Mus"
+      },
+      {
+        "id": "ope-309ccb4c35",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "Pre-ops must stay distinct from Peer Arena critique-before-merge (PR-3 / \u00a71.1)",
+        "suggested_fix": "Require both for Tier \u22652 code changes that also touch prod paths; do not collapse into one LGTM.",
+        "evidence": "statement  ### 1.1 Pre-ops is not peer review  | Gate | When | Question answered | Covered by | |------|------|-------------------|----"
+      },
+      {
+        "id": "ope-e30c319655",
+        "persona_id": "operator",
+        "severity": "high",
+        "claim": "One-thing-first needs a machine check \u2014 prose alone will be gamed",
+        "suggested_fix": "Schema reject when tools_requested span >1 prod_paths class or when Slack+Gmail both appear.",
+        "evidence": "hing run may name **exactly one** primary target system and one intended outcome. \u201cAlso clean up Slack while you\u2019re in Gmail\u201d is an automa"
+      },
+      {
+        "id": "sec-3cb88de485",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "GitHub Environment required reviewers may be unavailable on some Free/private plans (PR-2)",
+        "suggested_fix": "Document local Hold/Apply as the universal Tier-3 gate; Environments are should when plan allows.",
+        "evidence": "nvironments)). Note plan limits: required reviewers for Environments are limited on some Free/private configs \u2014 design th"
+      },
+      {
+        "id": "sec-72dc31e064",
+        "persona_id": "security",
+        "severity": "high",
+        "claim": "Self-merge / self-deploy tools must stay off agent allowlists (Appendix C AC.8)",
+        "suggested_fix": "Keep \u00a79.1 must #5: no gh pr merge / deploy tools in T3 allowlists; CI bot opens, human merges.",
+        "evidence": "agents touch.   5. No self-merge tools in agent allowlists.  ### 9.2 Should  1. Environments for staging/production where plan a"
+      },
+      {
+        "id": "ske-29a015adf8",
+        "persona_id": "skeptic",
+        "severity": "high",
+        "claim": "A filled risk card is not runtime authorization \u2014 Appendix B pitfall still bites if prose-only",
+        "suggested_fix": "Keep must-list: card + Hold/Apply + protected main/Environments; never treat card completion as runtime auth.",
+        "evidence": "incentives.   3. **Policy PDF with no runtime gate** ([Appendix B pitfalls](https://raw.githubusercontent.com/OWASP/AISVS/main/1.0/en/0x91-A"
+      }
+    ],
+    "nice_to_haves": [
+      {
+        "id": "ope-22f6d30996",
+        "persona_id": "operator",
+        "severity": "medium",
+        "claim": "Local LIVE :43xx ports are correctly called production-class when humans treat them as truth",
+        "suggested_fix": "Restart/wipe of state-holding LIVE apps requires a card; document in burn runbooks.",
+        "evidence": "A process bound on `127.0.0.1:43xx` is still a production surface if humans treat it as truth. Pre-ops for \u201crestart / rebind"
+      },
+      {
+        "id": "pro-61dea8a1d7",
+        "persona_id": "product",
+        "severity": "medium",
+        "claim": "Jim \u00b7 Interests lane #2 / Pre-ops Origin adjacency is clear \u2014 CTA should be encode Origin agent, not another brief",
+        "suggested_fix": "End burn notes with one ask: scaffold Pre-ops Origin from \u00a73 card schema.",
+        "evidence": "-|--------------| | Pre-ops Origin agent (Jim lane #2) | Owns the risk-card UX; produces ALLOW-SCOPED / DENY | | Peer Review Arena"
+      },
+      {
+        "id": "sec-d79d5ca095",
+        "persona_id": "security",
+        "severity": "medium",
+        "claim": "Fail-open Apply timeout is an explicit anti-pattern \u2014 verify runtime default is fail-closed",
+        "suggested_fix": "Wire expires \u2192 deny pending action; escalate to backup human, never auto-approve Tier 3.",
+        "evidence": "e card schema.   3. Fail-closed Apply timeouts for irreversible classes.   4. Protected `main` on personal repos agents touch.   5. No s"
+      },
+      {
+        "id": "ske-046997f952",
+        "persona_id": "skeptic",
+        "severity": "medium",
+        "claim": "Simulated forge peer reviewer is same burn family \u2014 not an independent pre-ops authority (PR-5)",
+        "suggested_fix": "Label independence quality; prefer /interrogate or cross-family critic before encoding Pre-ops Origin as fleet law.",
+        "evidence": "old must cover, (c) simulated peer reviewer is not an independent pre-ops authority.  ---  ## Pipeline provenance  | Stage | Role | O"
+      },
+      {
+        "id": "ux_-160f2605da",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Risk-card schema is dense for a nightly gate \u2014 operators need a 30-second fill path",
+        "suggested_fix": "Ship a one-screen card UI with required fields only; advanced evidence packet behind expander.",
+        "evidence": "ms.  ---  ## 3. The pre-ops risk card (minimum viable gate)  ### 3.1 One-thing-first rule  A prod-touching run may name **exact"
+      },
+      {
+        "id": "ux_-9b851f1e14",
+        "persona_id": "ux_delight",
+        "severity": "medium",
+        "claim": "Deny-by-default checklist uses checkboxes that read as 'done' \u2014 invert to fail conditions",
+        "suggested_fix": "Render as red fail chips ('DENY if\u2026') so unchecked does not look like progress.",
+        "evidence": "tion.md)).  ### 4.2 Deny by default checklist  Deny (or strip tools) when any are true:  - [ ] Tools include send/merge/deploy/pay with"
+      },
+      {
+        "id": "ope-30d2e240e3",
+        "persona_id": "operator",
+        "severity": "low",
+        "claim": "Scorecard columns in \u00a713 need a Fleet Doctor v2 home \u2014 metrics not yet wired LIVE",
+        "suggested_fix": "Nice-to-have: add pre-ops coverage column to fleet-doctor-v2 after Origin agent exists.",
+        "evidence": "-|--------|-----| | Prod-tool sessions with card | 100% | <100% but no irreversible | Any irreversible without card | | Mean Apply latency"
+      },
+      {
+        "id": "pro-cce427441f",
+        "persona_id": "product",
+        "severity": "low",
+        "claim": "Fleet product map (\u00a78) correctly keeps Kids Studio / dual-pool orthogonal to prod authority",
+        "suggested_fix": "Keep exclusions when topics regenerate; no vertical/firm encoding.",
+        "evidence": "tudio (brief-006) | Child sessions never get prod tools; parent gate is a specialized pre-ops | | Agent Brief Forge itself | Research-only; no ou"
+      },
+      {
+        "id": "sec-51f5c4af40",
+        "persona_id": "security",
+        "severity": "low",
+        "claim": "EU AI Act Art.14 pointer is correctly framed as north star, not household compliance claim",
+        "suggested_fix": "Keep the disclaimer adjacent whenever Art.14 is cited in the Origin agent UX.",
+        "evidence": "design north star, not an assertion that household bots are in-scope high-risk systems.  ---  ## 3. The pre-ops risk card (minimum viable gate)  ### 3.1 One-t"
+      },
+      {
+        "id": "ske-a2b04d68be",
+        "persona_id": "skeptic",
+        "severity": "low",
+        "claim": "AWS three-tier maps awkwardly onto a solo household operator (PR-4)",
+        "suggested_fix": "For solo fleets: Tier 3 needs time-separated Apply or second-family critic + human Apply \u2014 never same-chat self-approve.",
+        "evidence": "l changes) = auto + multi-stakeholder approval. Automated validation **before** human time. Timeouts escalate; do not fail open"
+      },
+      {
+        "id": "ux_-a2aa6ee607",
+        "persona_id": "ux_delight",
+        "severity": "low",
+        "claim": "Worked examples (ALLOW/DENY/DEFER) are excellent \u2014 surface them as templates in the card UX",
+        "suggested_fix": "Pre-fill card from example chips; keep synthetic badge so they are not treated as live approvals.",
+        "evidence": "ynthetic)  ### 11.1 ALLOW-SCOPED \u2014 draft PR docs only  - one_thing: open draft PR updating README in personal repo X   - class: reversible   -"
+      }
+    ],
+    "per_persona": [
+      {
+        "id": "skeptic",
+        "name": "Skeptic",
+        "color": "#f97316",
+        "finding_count": 4,
+        "blocker": 0,
+        "high": 1,
+        "medium": 1,
+        "low": 1,
+        "nit": 1,
+        "risk_contribution": 10
+      },
+      {
+        "id": "security",
+        "name": "Security",
+        "color": "#ef4444",
+        "finding_count": 5,
+        "blocker": 1,
+        "high": 2,
+        "medium": 1,
+        "low": 1,
+        "nit": 0,
+        "risk_contribution": 18
+      },
+      {
+        "id": "ux_delight",
+        "name": "UX Delight",
+        "color": "#a855f7",
+        "finding_count": 4,
+        "blocker": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 1,
+        "nit": 1,
+        "risk_contribution": 9
+      },
+      {
+        "id": "operator",
+        "name": "Operator / On-call",
+        "color": "#22c55e",
+        "finding_count": 5,
+        "blocker": 0,
+        "high": 2,
+        "medium": 1,
+        "low": 1,
+        "nit": 1,
+        "risk_contribution": 14
+      },
+      {
+        "id": "product",
+        "name": "Product Strategist",
+        "color": "#38bdf8",
+        "finding_count": 3,
+        "blocker": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 1,
+        "nit": 1,
+        "risk_contribution": 6
+      }
+    ],
+    "counts": {
+      "findings": 21,
+      "must_fix": 6,
+      "nice_to_haves": 11,
+      "disagreements": 0,
+      "topics": 21,
+      "blocker": 1,
+      "high": 5,
+      "medium": 6,
+      "low": 5,
+      "nit": 4
+    }
+  }
+}

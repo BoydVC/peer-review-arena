@@ -1,0 +1,81 @@
+{
+  "brief_id": "brief-024",
+  "reviewer": "simulated-peer-reviewer",
+  "reviewed_at": "2026-10-27T00:04:00-04:00",
+  "verdict": "accept_with_revisions_noted",
+  "findings": [
+    {
+      "id": "PR-1",
+      "severity": "high",
+      "claim": "Architecture CI job that logs violations but exits 0 counts as encoded",
+      "issue": "Logging is observation; only non-zero exit + required status check blocks merge.",
+      "recommendation": "Keep \u00a76.1 three properties and Appendix F; scorecard advisory_only_arch_job=0.",
+      "status": "addressed_in_sections_1_6_9_appendix_F",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-2",
+      "severity": "high",
+      "claim": "Writing the lesson again in AGENTS.md satisfies /correct",
+      "issue": "docs_only_lessons must stay 0; prose is last and insufficient when a machine gate is possible.",
+      "recommendation": "Keep \u00a74 ladder and Appendix E.",
+      "status": "addressed_in_sections_4_5_9_appendix_E",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-3",
+      "severity": "high",
+      "claim": "Cursor approval-agent LGTM is human OK for main",
+      "issue": "DRAFT-DAY-GATES G1: low-risk auto-approve \u2260 household human_ok.",
+      "recommendation": "Keep \u00a76.3 and adversarial scenario 5.",
+      "status": "addressed_in_sections_3_6_11",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-4",
+      "severity": "high",
+      "claim": "New Semgrep rule without past-mistake fixture is fine",
+      "issue": "/correct requires prove each check fails on a real past mistake.",
+      "recommendation": "Keep \u00a74.3 and scorecard unproven_checks=0.",
+      "status": "addressed_in_sections_4_9",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-5",
+      "severity": "medium",
+      "claim": "Pre-ops, Draft Day, and Correct CI can collapse into one LGTM",
+      "issue": "PREOPS_GATES #2 forbids collapse; three distinct questions.",
+      "recommendation": "Keep \u00a73 pairing law and Appendix C.",
+      "status": "addressed_in_sections_3_appendix_C",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-6",
+      "severity": "medium",
+      "claim": "SYNTHETIC demo workflow proves LIVE BoydVC main protection",
+      "issue": "Pairs brief-008/010: every gate report needs LIVE vs SYNTHETIC stamp.",
+      "recommendation": "Keep \u00a78 and synthetic_sold_as_live=0.",
+      "status": "addressed_in_sections_8_9",
+      "convergence": "n/a"
+    },
+    {
+      "id": "PR-7",
+      "severity": "low",
+      "claim": "Simulated peer reviewer is an independent authority",
+      "issue": "Same Grok Bot weekly burn synthesizer and peer_reviewer share model family and pool.",
+      "recommendation": "Label independence quality; prefer external /interrogate before encoding as fleet law.",
+      "status": "noted_for_operators",
+      "convergence": "n/a"
+    }
+  ],
+  "strengths": [
+    "Clear /correct ladder: arch\u2192types\u2192lint/CI\u2192tests\u2192docs",
+    "auto_merge=0 / docs_only_lessons=0 scorecard with definitions",
+    "Pairs PREOPS_GATES + DRAFT-DAY-GATES without collapsing gates",
+    "Required-check design: exit non-zero, deterministic, fail-closed",
+    "Mistake-class catalog + prove-on-past-mistake fixtures",
+    "No KPD; no burn outbound; no cloud agents from research burn",
+    "108 live HTTP 200 citations; America/New_York stamps"
+  ],
+  "required_fixes_before_publish": []
+}
