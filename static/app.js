@@ -153,6 +153,11 @@ async function runReview(opts = {}) {
     save: true,
     ...opts,
   };
+  if (!opts.draft && body.draft.trim().length < 40) {  // same 40-char minimum the server enforces
+    toast("Paste a draft of at least 40 characters, or load a sample above.");
+    $("draft").focus();
+    return;
+  }
   const r = await fetch("/api/review", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

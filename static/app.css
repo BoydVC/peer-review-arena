@@ -161,3 +161,8 @@ footer {
 @media (max-width: 980px) {
   .law-panel-wrap { grid-column: auto; }
 }
+
+/* First-Run Lab fix: 44px tap targets and no sideways scroll on phones */
+.seed-row button,.actions button{min-height:44px}
+.grid,.panel{min-width:0;max-width:100%}
+pre,table{display:block;max-width:100%;overflow-x:auto}
