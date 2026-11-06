@@ -35,7 +35,7 @@ Skipping pre-ops produces “approved the email body” after the agent already 
 
 ### 1.2 Household + personal-GitHub threat model
 
-Assume Boyd-style ops (no enterprise CAB theater):
+Assume Alex-style ops (no enterprise CAB theater):
 
 - Multiple Grok Bots and Cursor agents share a box filesystem; desktops are per-agent.  
 - Weekly burns ship local LIVE apps and Origin drafts; some repos are public or org-private on personal GitHub.  
@@ -288,7 +288,7 @@ Swarm-level halt for parallel burns that drift into prod ([C9.1.3](https://raw.g
 
 ---
 
-## 8. Mapping to Boyd fleet products
+## 8. Mapping to Alex fleet products
 
 | Product / habit | Pre-ops role |
 |-----------------|--------------|

@@ -65,7 +65,7 @@
             "severity": "blocker",
             "claim": "Draft must never be sent from a burn/subagent session",
             "evidence": "file is a draft. **Do not send from a burn/subagent session.**",
-            "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+            "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.",
             "topic": "send_gate"
           },
           {
@@ -205,7 +205,7 @@
         "id": "product",
         "name": "Product Strategist",
         "role": "Fit & narrative ownership",
-        "lens": "Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity.",
+        "lens": "Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity.",
         "color": "#38bdf8",
         "finding_count": 3,
         "findings": [
@@ -237,7 +237,7 @@
             "topic": "timing"
           }
         ],
-        "summary": "Product Strategist filed 3 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity."
+        "summary": "Product Strategist filed 3 finding(s) via Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity."
       }
     ],
     "findings": [
@@ -274,7 +274,7 @@
         "severity": "blocker",
         "claim": "Draft must never be sent from a burn/subagent session",
         "evidence": "file is a draft. **Do not send from a burn/subagent session.**",
-        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.",
         "topic": "send_gate"
       },
       {
@@ -431,7 +431,7 @@
           "security"
         ],
         "headline": "Draft must never be sent from a burn/subagent session",
-        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.",
         "finding_ids": [
           "sec-6b9c68abb0"
         ]
@@ -669,7 +669,7 @@
         "persona_id": "security",
         "severity": "blocker",
         "claim": "Draft must never be sent from a burn/subagent session",
-        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "suggested_fix": "Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.",
         "evidence": "file is a draft. **Do not send from a burn/subagent session.**"
       },
       {

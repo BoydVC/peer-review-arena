@@ -103,7 +103,7 @@ def _bonsai_findings(text: str) -> list[dict[str, Any]]:
         "security", "blocker",
         "Draft must never be sent from a burn/subagent session",
         _evidence_snip(text, "Do not send from a burn") or "Do not send from a burn/subagent session.",
-        "Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.",
+        "Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.",
         "send_gate",
     ))
     out.append(_finding(
@@ -233,7 +233,7 @@ def _forge_findings(text: str) -> list[dict[str, Any]]:
         "skeptic", "low",
         "Pipeline stages are simulated peer review, not a live multi-model debate",
         _evidence_snip(text, "simulated peer reviewer") or "searcher → synthesizer → simulated peer reviewer",
-        "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips.",
         "honesty",
     ))
     out.append(_finding(
@@ -477,7 +477,7 @@ def _preops_findings(text: str) -> list[dict[str, Any]]:
         "Fleet product map (§8) correctly keeps Kids Studio / dual-pool orthogonal to prod authority",
         _evidence_snip(text, "Child sessions never get prod tools")
         or _evidence_snip(text, "burn pool ≠ prod authority")
-        or "Mapping to Boyd fleet products",
+        or "Mapping to Alex fleet products",
         "Keep exclusions when topics regenerate; no vertical/firm encoding.",
         "fleet_fit",
     ))
@@ -617,7 +617,7 @@ def _generic_findings(text: str) -> list[dict[str, Any]]:
 
     out.append(_finding(
         "product", "medium",
-        "Ownership hook: does the draft say why this is Boyd's?",
+        "Ownership hook: does the draft say why this is Alex's?",
         text[:140].replace("\n", " "),
         "Open with bookmark / fleet adjacency before features.",
         "narrative",

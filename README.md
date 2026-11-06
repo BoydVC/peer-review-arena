@@ -16,7 +16,7 @@ cd /workspace/tokenmax/peer-review-arena
 
 Open the UI → **Load Bonsai reveal** / **Load Brief-007 pre-ops** (or paste a draft) → **Run review**. Chair panel shows verdict, must-fix, consensus table, disagreements. Full transcript saves under `out/`.
 
-**Brief-024 fold:** portable `/correct` CI law panel (`Brief-024 law · /correct CI`) with scorecard `auto_merge=0` / `docs_only_lessons=0`, alongside the existing brief-007 pre-ops seed. `GET /api/brief024` + `live_check`; POST `/api/auto-merge`, `/api/force-merge`, `/api/bypass-correct-ci` → **403**. Never merge without Boyd OK.
+**Brief-024 fold:** portable `/correct` CI law panel (`Brief-024 law · /correct CI`) with scorecard `auto_merge=0` / `docs_only_lessons=0`, alongside the existing brief-007 pre-ops seed. `GET /api/brief024` + `live_check`; POST `/api/auto-merge`, `/api/force-merge`, `/api/bypass-correct-ci` → **403**. Never merge without Alex OK.
 
 **Brief-027 fold:** portable Grok Council law panel (`Brief-027 law · Grok Council`) with scorecard `auto_apply_council=0` / `auto_send=0`, alongside brief-007 + brief-024. `GET /api/brief027` + `live_check`; POST `/api/auto-apply`, `/api/auto-apply-council`, `/api/council-force-send` → **403**. Council Hold until human Apply; never majority-vote auto-apply. Pairs brief-008 + brief-017.
 
