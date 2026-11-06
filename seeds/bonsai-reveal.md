@@ -84,5 +84,5 @@ Exact path for the live demo. Prefer a clean shell; nothing else on port 4317.
 - [ ] STATUS.md SHA still e41f0d6 (or update numbers if a newer pass landed).
 - [ ] Attachments re-checked against `artifacts/MANIFEST.json`.
 - [ ] Honesty line still matches what the code actually does (catalog vs discovery; Apply safety).
-- [ ] "Where it lives" still Origin draft — do not publish or move without Boyd's OK.
+- [ ] "Where it lives" still Origin draft — do not publish or move without Alex's OK.
 - [ ] Parent sends via the approved channel only; this file is a draft. **Do not send from a burn/subagent session.**

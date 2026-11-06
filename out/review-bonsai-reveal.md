@@ -14,7 +14,7 @@ Chair merges 19 findings from 5 personas → verdict=hold, must-fix=6, nice-to-h
 ### [BLOCKER] Draft must never be sent from a burn/subagent session
 - **Persona:** security · **id:** `sec-6b9c68abb0`
 - **Evidence:** file is a draft. **Do not send from a burn/subagent session.**
-- **Fix:** Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.
+- **Fix:** Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.
 
 ### [HIGH] Port 4317 must be free; Next.js 'N' badge means wrong serve mode
 - **Persona:** operator · **id:** `ope-bc1a341e91`
@@ -119,7 +119,7 @@ _Security filed 4 finding(s) via Irreversible actions, synthetic vs real data, p
 #### [blocker] Draft must never be sent from a burn/subagent session
 - **Topic:** `send_gate` · **id:** `sec-6b9c68abb0`
 - **Evidence:** file is a draft. **Do not send from a burn/subagent session.**
-- **Suggested fix:** Enforce send-on-behalf Hold: only parent channel after Boyd OK; burn agents produce drafts only.
+- **Suggested fix:** Enforce send-on-behalf Hold: only parent channel after Alex OK; burn agents produce drafts only.
 
 #### [high] Repo is still a private Origin draft — reveal must not imply public publish
 - **Topic:** `publish_boundary` · **id:** `sec-eeeaee22e3`
@@ -191,7 +191,7 @@ _Operator / On-call filed 4 finding(s) via Runbooks, ports, reset/recover, failu
 
 ### Product Strategist — Fit & narrative ownership
 
-_Product Strategist filed 3 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity._
+_Product Strategist filed 3 finding(s) via Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity._
 
 #### [medium] Bookmark lineage (/correct, trust pyramid, Draft Day adjacency) is the ownership hook
 - **Topic:** `narrative` · **id:** `pro-659dd58f41`

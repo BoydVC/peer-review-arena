@@ -29,7 +29,7 @@ Chair merges 10 findings from 5 personas → verdict=hold, must-fix=2, nice-to-h
 - **[medium]** Seed brief claims live WebSearch/WebFetch citations — peer must spot-check URLs still resolve — _Smoke should assert ≥5 unique http citations and sample-fetch 2 URLs._ (`ske-fff1fc6a04`)
 - **[medium]** 2-minute how-to is crisp; home should surface brief line count + citation count — _Dashboard hero: lines / citations / peer-review verdict at a glance._ (`ux_-872fce1d89`)
 - **[low]** NEXT_TOPICS intentionally skip law firm — aligns with burn rules — _Keep exclusion list in DESIGN when topics regenerate._ (`pro-8097af8ef2`)
-- **[low]** Pipeline stages are simulated peer review, not a live multi-model debate — _Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips._ (`ske-669d1f4015`)
+- **[low]** Pipeline stages are simulated peer review, not a live multi-model debate — _Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips._ (`ske-669d1f4015`)
 - **[low]** Ten NEXT_TOPICS are heavy follow-ups — good burn fuel, dense for a first glance — _UI: show top 3 topics + '7 more' expander._ (`ux_-721ac9dbca`)
 
 ## Consensus table
@@ -74,7 +74,7 @@ _Skeptic filed 2 finding(s) via Overclaims, missing evidence, demo theater vs pr
 #### [low] Pipeline stages are simulated peer review, not a live multi-model debate
 - **Topic:** `honesty` · **id:** `ske-669d1f4015`
 - **Evidence:** her → synthesizer → simulated peer reviewer → citation checker**) and serves long cited briefs on practical agent-tooling questions.
-- **Suggested fix:** Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.
+- **Suggested fix:** Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips.
 
 ### Security — Blast-radius & trust boundary reviewer
 
@@ -120,7 +120,7 @@ _Operator / On-call filed 2 finding(s) via Runbooks, ports, reset/recover, failu
 
 ### Product Strategist — Fit & narrative ownership
 
-_Product Strategist filed 2 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity._
+_Product Strategist filed 2 finding(s) via Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity._
 
 #### [medium] Hold/Apply brief topic maps cleanly onto Bonsai + Draft Day adjacency
 - **Topic:** `fleet_fit` · **id:** `pro-88b2a58e65`

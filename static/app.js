@@ -218,7 +218,7 @@ function renderBrief024(b) {
     <div class="law-banner">
       Portable /correct CI encoding folded alongside brief-007 pre-ops.
       Ladder: <code>${ladder || "arch → types → lint/CI → tests → docs"}</code>.
-      Never merge without Boyd OK. America/New_York.
+      Never merge without Alex OK. America/New_York.
     </div>
     <ul class="law-list">${laws}</ul>
     <h3 style="margin:.5rem 0 .3rem;font-size:.86rem;color:var(--accent)">Scorecard zeros</h3>

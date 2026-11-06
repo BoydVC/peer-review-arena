@@ -19,7 +19,7 @@
     "independence": "simulated peer (same model family) — prefer external /interrogate before fleet law"
   },
   "timezone": "America/New_York",
-  "standing_rule": "arch → types → lint/CI (error names the fix) → tests → docs last; prove each check on a past mistake; never merge without Boyd OK.",
+  "standing_rule": "arch → types → lint/CI (error names the fix) → tests → docs last; prove each check on a past mistake; never merge without Alex OK.",
   "encoding_ladder": [
     "architecture (delete old path / one owner)",
     "types (illegal state unrepresentable)",
@@ -81,7 +81,7 @@
     },
     {
       "id": "auto-merge-zero",
-      "text": "auto_merge=0 — never merge without Boyd OK; Draft Day / burn never enable auto-merge or gh pr merge."
+      "text": "auto_merge=0 — never merge without Alex OK; Draft Day / burn never enable auto-merge or gh pr merge."
     },
     {
       "id": "prove-past-mistake",

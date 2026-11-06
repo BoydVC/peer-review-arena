@@ -2,7 +2,7 @@
 
 ## Spark
 
-Jim · Interests burn snapshot + Boyd bookmarks on multi-agent peer review / @EXM7777-shaped critique loops. Runner-up build: **multi-agent critique loop before merge**.
+Jim · Interests burn snapshot + Alex bookmarks on multi-agent peer review / @EXM7777-shaped critique loops. Runner-up build: **multi-agent critique loop before merge**.
 
 ## Job to be done
 
@@ -56,7 +56,7 @@ Before a reveal, PR description, or agent plan ships, fan out **independent revi
 - Live multi-round LLM debate
 - Cursor cloud agents / on-demand
 - kpdlawgroup or client drafts
-- Messaging Boyd from this app
+- Messaging Alex from this app
 
 ## Stack
 

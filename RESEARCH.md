@@ -4,7 +4,7 @@ Cited desk on multi-agent debate, adversarial review, and LLM-as-judge pitfalls.
 
 ## 1. Why this product exists
 
-Jim · Interests (burn-night snapshot ~Oct 20–26) listed a **multi-agent critique loop before merge** as a strong runner-up after Household Call Agent, Kids Coding Studio, and X Lists → Brief Pack. Boyd’s bookmarks cluster on Grok Bot product patterns including multi-agent peer review (Roemmele-style templates, marketplace packs, Vault, Bot calling businesses). The @EXM7777-shaped pattern — fan out specialized reviewers, then chair a merge — is the operating metaphor.
+Jim · Interests (burn-night snapshot ~Oct 20–26) listed a **multi-agent critique loop before merge** as a strong runner-up after Household Call Agent, Kids Coding Studio, and X Lists → Brief Pack. Alex’s bookmarks cluster on Grok Bot product patterns including multi-agent peer review (Roemmele-style templates, marketplace packs, Vault, Bot calling businesses). The @EXM7777-shaped pattern — fan out specialized reviewers, then chair a merge — is the operating metaphor.
 
 Peer Review Arena encodes that loop as a **local, deterministic desk**: five fixed personas produce structured findings; a Chair builds consensus, disagreements, and a must-fix-before-ship list. No Cursor cloud agents. No live model spend required for the seed critiques (heuristic + curated evidence quotes). The research below tells us what to copy and what to refuse.
 
@@ -152,7 +152,7 @@ Second seed: Agent Brief Forge README / NEXT_TOPICS — exercises the same cast 
 1. If we add real model personas, should they be **heterogeneous models** (Ma et al. resistance) rather than five prompts on one model?
 2. Should Chair be a separate stronger model (meta-judge) with **no** persona history until final merge?
 3. Can we attach **executable probes** (curl health, screenshot SYNTHETIC badge) as first-class findings beside prose?
-4. How do we score Chair calibration against Boyd’s actual “would I send this?” decisions over a month of reveals?
+4. How do we score Chair calibration against Alex’s actual “would I send this?” decisions over a month of reveals?
 
 ## 9. Citation list (compact)
 

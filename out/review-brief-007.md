@@ -205,7 +205,7 @@ _Operator / On-call filed 5 finding(s) via Runbooks, ports, reset/recover, failu
 
 ### Product Strategist — Fit & narrative ownership
 
-_Product Strategist filed 3 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity._
+_Product Strategist filed 3 finding(s) via Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity._
 
 #### [medium] Jim · Interests lane #2 / Pre-ops Origin adjacency is clear — CTA should be encode Origin agent, not another brief
 - **Topic:** `cta` · **id:** `pro-61dea8a1d7`

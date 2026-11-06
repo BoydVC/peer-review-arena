@@ -34,7 +34,7 @@ PERSONAS = [
         "id": "product",
         "name": "Product Strategist",
         "role": "Fit & narrative ownership",
-        "lens": "Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity.",
+        "lens": "Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity.",
         "color": "#38bdf8",
     },
 ]

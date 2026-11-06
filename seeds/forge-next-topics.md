@@ -1,6 +1,6 @@
 # Next topics (heavy follow-ups)
 
-Tailored for Boyd — personal AI agents, Grok Bot fleet ops, SpaceX ops dashboards, youth sports logistics. Not collections / law firm.
+Tailored for Alex — personal AI agents, Grok Bot fleet ops, SpaceX ops dashboards, youth sports logistics. Not collections / law firm.
 
 1. **Grok Bot fleet token-pool discipline** — When weekly Grok Bot burn vs Cursor Models diverge: metering, routine under-pace auto-burn, and preventing “cool stuff on the wrong pool.”
 2. **Send-on-behalf Hold/Apply for Slack + Gmail** — Binding drafts to recipient/body digests, irreversible-action cards, and fail-closed retries across connectors.

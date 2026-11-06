@@ -298,7 +298,7 @@ class Handler(SimpleHTTPRequestHandler):
                 403,
                 {
                     "ok": False,
-                    "error": "refused: brief-024 /correct CI — auto_merge=0 / docs_only_lessons=0; never merge without Boyd OK",
+                    "error": "refused: brief-024 /correct CI — auto_merge=0 / docs_only_lessons=0; never merge without Alex OK",
                     "path": path,
                     "brief_id": "brief-024",
                 },
@@ -375,7 +375,7 @@ class Handler(SimpleHTTPRequestHandler):
                 403,
                 {
                     "ok": False,
-                    "error": "refused: brief-024 /correct CI — auto_merge=0 / docs_only_lessons=0; never merge without Boyd OK",
+                    "error": "refused: brief-024 /correct CI — auto_merge=0 / docs_only_lessons=0; never merge without Alex OK",
                     "path": parsed.path,
                     "brief_id": "brief-024",
                 },

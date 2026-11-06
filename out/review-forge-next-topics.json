@@ -36,7 +36,7 @@
             "severity": "low",
             "claim": "Pipeline stages are simulated peer review, not a live multi-model debate",
             "evidence": "searcher \u2192 synthesizer \u2192 simulated peer reviewer",
-            "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+            "suggested_fix": "Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips.",
             "topic": "honesty"
           }
         ],
@@ -133,7 +133,7 @@
         "id": "product",
         "name": "Product Strategist",
         "role": "Fit & narrative ownership",
-        "lens": "Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity.",
+        "lens": "Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity.",
         "color": "#38bdf8",
         "finding_count": 2,
         "findings": [
@@ -156,7 +156,7 @@
             "topic": "scope"
           }
         ],
-        "summary": "Product Strategist filed 2 finding(s) via Why this exists for Boyd, bookmark lineage, fleet placement, next-ask clarity."
+        "summary": "Product Strategist filed 2 finding(s) via Why this exists for Alex, bookmark lineage, fleet placement, next-ask clarity."
       }
     ],
     "findings": [
@@ -175,7 +175,7 @@
         "severity": "low",
         "claim": "Pipeline stages are simulated peer review, not a live multi-model debate",
         "evidence": "searcher \u2192 synthesizer \u2192 simulated peer reviewer",
-        "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "suggested_fix": "Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips.",
         "topic": "honesty"
       },
       {
@@ -362,7 +362,7 @@
           "skeptic"
         ],
         "headline": "Pipeline stages are simulated peer review, not a live multi-model debate",
-        "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "suggested_fix": "Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips.",
         "finding_ids": [
           "ske-669d1f4015"
         ]
@@ -467,7 +467,7 @@
         "persona_id": "skeptic",
         "severity": "low",
         "claim": "Pipeline stages are simulated peer review, not a live multi-model debate",
-        "suggested_fix": "Label UI as 'simulated stages' so Boyd doesn't expect live LLM round-trips.",
+        "suggested_fix": "Label UI as 'simulated stages' so Alex doesn't expect live LLM round-trips.",
         "evidence": "searcher \u2192 synthesizer \u2192 simulated peer reviewer"
       },
       {
